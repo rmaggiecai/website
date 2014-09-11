@@ -19,12 +19,14 @@
 body{
 	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
 	color: @gray1;	
+	font-size: 20px;
+	font-weight: 300;
 }
 
 h1{
 	color: @teal0;
 	font-weight: bold;
-	font-size: 5em;
+	font-size: 3.5em;
 	margin-top: 190px;
 }
 
@@ -33,14 +35,14 @@ h2{
 	color: @gray3;
 	font-style: italic;
 	font-weight: 300;
-	font-size: 2em;
+	font-size: 1.4em;
 	margin-top: 0px;
 }
 
 h3 {
 	color: @gray3;
 	text-transform: lowercase;
-	font-size: 3em;
+	font-size: 2.1em;
 	margin-top: 45px;
 }
 
@@ -51,13 +53,13 @@ h4{
 
 h5{
 	font-weight: bold;
-	font-size: 1.7em;
-	margin-top: 25px;
+	font-size: 1.2em;
+	// margin-top: 25px;
+
 }
 
 p{
-	font-weight: 300;
-	font-size: 1.4em;
+	font-size: 1em;
 }
 
 a{
@@ -90,8 +92,7 @@ a{
 		left: 40px;
 	}
 	.navbar-bottom{
-		font-size: 1.7em;
-		font-weight: normal;
+		font-size: 1.2em;
 		border-top: 3px solid @gray4;
 		/* Firefox */
 		top: -moz-calc(~"100% - 70px");
@@ -119,17 +120,20 @@ a{
 		color: @gray5; 
 	}
 
-	h2, a{
+	h2,a{
 		color: @gray4;
 	}
 
-	a:hover{
-		background-color: @gray2;
+	a{
+		&:hover{
+			background-color: @gray2;
+		}
 	}
 
 	.row{
 		margin: 0px 30px;
 	}
+
 }
 
 .home-section-title{
@@ -143,8 +147,58 @@ a{
 	}
 	.fa-5x{
 		color: @coral0;
-		font-size: 8em;
+		font-size: 4em;
 	}
+	h5{
+		margin-top: 30px;
+	}
+
 }
 
+#slide-4{
+	.company{
+		color: @coral0;
+		font-weight: normal;
+	}
+
+	.des-location{
+		margin-top: 15px;
+	}
+
+	[class^="des-"]{
+		font-size: 0.9em;
+		color: @gray3;
+		margin-bottom: 0px;
+	}
+
+	.opp{
+		margin: 20px 0px 45px;
+	}
+
+	h5{
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	h3{
+		padding-left: 15px;
+	}
+}
+ .footer{
+ 	background-color: @gray1;
+ 	ul{
+ 		padding: 0px;
+ 	}
+ 	li{
+ 		position: relative;
+ 		display: inline-block;
+ 		margin-top: 10px;
+ 		padding-left: calc(~"12.5% - 0.75em");
+ 		padding-right: calc(~"12.5% - 0.75em");
+
+ 		a{
+ 			color: @gray4;
+ 		}
+ 	}
+ }
 
