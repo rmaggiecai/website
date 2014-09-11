@@ -92,15 +92,27 @@ a{
 	.navbar-bottom{
 		font-size: 1.7em;
 		font-weight: normal;
-		border-top: 1px solid @gray4;
+		border-top: 3px solid @gray4;
 		/* Firefox */
-		top: -moz-calc(~"100% - 50px");
+		top: -moz-calc(~"100% - 70px");
 		/* WebKit */
-		top: -webkit-calc(~"100% - 50px");
+		top: -webkit-calc(~"100% - 70px");
 		/* Opera */
-		top: -o-calc(~"100% - 50px");
+		top: -o-calc(~"100% - 70px");
 		/* Standard */
-		top: calc(~"100% - 50px");
+		top: calc(~"100% - 70px");
+
+		.navbar-right{
+			margin-top: 9px;
+		}
+		.btn-clear{
+				background-color: transparent;
+				border: 3px solid @gray4;
+				color: @gray4;
+				margin-top: 2px;
+
+		}
+			
 	}
 
 	h1{
@@ -133,7 +145,6 @@ a{
 		color: @coral0;
 		font-size: 8em;
 	}
-
 }
 
 
