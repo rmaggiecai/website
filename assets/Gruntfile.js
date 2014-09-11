@@ -15,8 +15,16 @@ module.exports = function(grunt) {
                      },
                      files: {"stylesheets/css/base.css": "stylesheets/less/base.less"}
                  }
-             }
+             },
+
+             watch: {
+                    files: ['stylesheets/less/base.less'], // which files to watch
+                    tasks: ['less']                
+            }
          });
          grunt.loadNpmTasks('grunt-contrib-less');
+         grunt.loadNpmTasks('grunt-contrib-watch');
+         // grunt.registerTask('watch', ['watch']);
          grunt.registerTask('default', ['less']);
+
      };
