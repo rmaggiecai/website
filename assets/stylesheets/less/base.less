@@ -78,7 +78,7 @@ a{
 
 		.img-filter{
 		background-color: rgba(65,66,66,0.36);
-		margin: 0px -15px;
+		margin: 0px;
 		}
 	}
 	background-color: @teal0;
@@ -88,7 +88,7 @@ a{
 
 	#title-info{
 		position: absolute;
-		top: 10%;
+		top: 32%;
 		left: 40px;
 	}
 	.navbar-bottom{
@@ -118,6 +118,7 @@ a{
 
 	h1{
 		color: @gray5; 
+		margin:0;
 	}
 
 	h2,a{
@@ -131,7 +132,7 @@ a{
 	}
 
 	.row{
-		margin: 0px 30px;
+		margin: 0px 15px;
 	}
 
 }
@@ -203,51 +204,88 @@ a{
  }
 #slide-3{
 	margin: 0px -15px;
-}
-#portfolio {
-	margin: 0 auto;
 	overflow: hidden;
-	padding: 0;
-	text-align: left;
-	width: 100%;
 
-	 .col-12 {
-		display: inline-block;
-		height: 451px;
-		margin: 0;
-		padding: 0;
-		width: 452px;
-	}
-
-	a,
-	img {
-		display: inline-block;
-		height: 100%;
+	#portfolio {
 		margin: 0 auto;
+		overflow: hidden;
+		padding: 0;
+		text-align: left;
 		width: 100%;
-	}
 
-	@media (max-width: 991px) {
-	text-align: center;
-	width: 100%;
-	
-	.row {
-		left: 0 !important;
-		margin: 0;
-		width: 100% !important;
-	}
-	
-	.col-12 {
-		height: auto;
-		width: 50%
-	}
+		.row{
+			margin: 0px;
+		}
+		.col-12 {
+			display: inline-block;
+			height: 451px;
+			margin: 0;
+			padding: 0;
+			width: 452px;
+		}
 
-	a,
-	img {
-		height: auto;
-		max-height: 100%;
-		max-width: 100%;
-		width: auto;
+		a,
+		img {
+			display: inline-block;
+			height: 100%;
+			margin: 0 auto;
+			width: 100%;
+		}
+
+		@media (max-width: 991px) {
+			text-align: center;
+			width: 100%;
+		
+			.row {
+				left: 0 !important;
+				margin: 0;
+				width: 100% !important;
+			}
+			
+			.col-12 {
+				height: auto;
+				width: 50%
+			}
+
+			a,
+			img {
+				height: auto;
+				max-height: 100%;
+				max-width: 100%;
+				width: auto;
+			}
+		}
+	}
+	#controls{
+		float:right;
+		margin-right: 15px;
+		margin-top: 10px;
+
+		button{
+			font-weight: normal;
+			font-size: inherit;
+			 outline: none;
+		  	border: none !important;
+		    -webkit-box-shadow: none !important;
+		    -moz-box-shadow: none !important;
+		  	box-shadow: none !important;
+		  	color: @teal0;
+
+				&:active{
+					color: @teal2;
+				}
+
+
+			&.inactive{
+			color: @gray4;
+			cursor: inherit;
+
+				// &:active{
+				// 	color: @teal2;
+				// }
+			}
+
+		}
 	}
 }
-}
+
