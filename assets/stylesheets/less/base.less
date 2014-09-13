@@ -202,3 +202,50 @@ a{
  	}
  }
 
+#slide-3 {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	text-align: left;
+	width: 100%;
+
+	 .col-12 {
+		display: inline-block;
+		height: 451px;
+		margin: 0;
+		padding: 0;
+		width: 452px;
+	}
+
+	a,
+	img {
+		display: inline-block;
+		height: 100%;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	@media (max-width: 991px) {
+	text-align: center;
+	width: 100%;
+	
+	.row {
+		left: 0 !important;
+		margin: 0;
+		width: 100% !important;
+	}
+	
+	.col-12 {
+		height: auto;
+		width: 50%
+	}
+
+	a,
+	img {
+		height: auto;
+		max-height: 100%;
+		max-width: 100%;
+		width: auto;
+	}
+}
+}
