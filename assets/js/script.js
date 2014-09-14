@@ -49,6 +49,7 @@ var delay = (function(){
 //navigation/ button clicks
 jQuery(document).ready(function ($) {
 	//Cache some variables
+	
 	var arrows = $('#controls button');
 	
 	arrows.click(function(e) {
@@ -66,24 +67,69 @@ jQuery(document).ready(function ($) {
 		switch( $(this).attr('id') ) {
 			case 'left':
 				offset_left = $('#portfolio .row').offset().left + 452;
-				if ( offset_left > 0 ) {
+				if ( offset_left >= 0 ) {
 					offset_left = '0px';
 				}
+
+
+
 				break;
 			case 'right':
 				offset_left = $('#portfolio .row').offset().left - 452;
 				if ( offset_left < $('body').width() - $('#portfolio .row').width() ) {
 					offset_left = $('body').width() - $('#portfolio .row').width();
 				}
+				
 				break;
 		}
 				
 		if ( offset_left != false ) {
 			if ( $('#portfolio .row').width() != $('body').width() ) {
-				$('#portfolio .row').stop(false, false).animate({
-					left: offset_left
-				}, 1500, 'easeInOutQuart');
+				
+				($( "#portfolio .row" ).animate({
+				    left: offset_left
+				  }, 1500, 'easeInOutQuart' ))
+				// $('#portfolio .row').stop(false, false).animate({
+				// 	left: "+=50"
+				// }, 1500, 'easeInOutQuart');
 			}
 		}
+		checkButtonStyle($('#portfolio .row'), offset_left);
 	});
+
 });
+
+function buttonStyle( button,active ){
+	console.log("buttonStyle");
+	if (active) 
+		$(button).removeClass('inactive');
+	else 
+		$(button).addClass('inactive');
+};
+
+function checkButtonStyle( rowPlacement, offSet ){
+	
+	console.log(rowPlacement.css('left'));
+	console.log(offSet);
+	var placement =parseInt(rowPlacement.css('left'));
+	if (offSet != "0px")
+		placement += offSet;
+
+	
+	if (offSet =="0px"){
+
+		buttonStyle($('#controls #left'),false);
+		buttonStyle($('#controls #right'),true);
+	} else {
+
+		buttonStyle($('#controls #left'),true);
+		// console.log($(rowPlacement).width());
+		// console.log(placement);
+
+		if ($(window).width() >= rowPlacement.width() + offSet)
+			buttonStyle($('#controls #right'),false);
+		else 
+			buttonStyle($('#controls #right'),true);
+
+	}
+};
