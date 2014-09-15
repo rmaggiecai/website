@@ -150,19 +150,78 @@ $(document).ready(function($) {
 			$('#contactMe button').removeClass('btn-primary');
 		}
 
-		// $.when($(document).scrollTop() < navHeight).then(function(){
-		// 	$('nav').removeClass("sticky");
-		// });
-
 	});
 	
 });
 
-// $(window).scroll(function() {
-// 	if ($(this).scrollTop() > 1){  
-//     $('nav').addClass("sticky");
-//   }
-//   else{
-//     $('nav').removeClass("sticky");
-//   }
-// });
+//move to page
+jQuery(document).ready(function ($) {
+	//Cache some variables
+	var links = $('.nav').find('li');
+	slide = $('.slide');
+	button = $('.button');
+	mywindow = $(window);
+	htmlbody = $('html,body');
+	
+	//Create a function that will be passed a slide number and then will scroll to that slide using jquerys animate. The Jquery
+	//easing plugin is also used, so we passed in the easing method of 'easeInOutQuint' which is available throught the plugin.
+	function goToByScroll(dataslide) {
+		// console.log('.slide[data-slide="' + dataslide + '"]');
+		var offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
+		
+		htmlbody.stop(false, false).animate({
+			scrollTop: offset_top
+		}, 1500, 'easeInOutQuart');
+	}
+	
+	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
+	links.click(function (e) {
+		e.preventDefault();
+		var dataslide = $(this).attr('data-slide');
+		goToByScroll(dataslide);
+		$(".nav-collapse").collapse('hide');
+	});
+	
+	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
+	$('.navigation-slide').click(function (e) {
+		e.preventDefault();
+		var dataslide = $(this).attr('data-slide');
+		goToByScroll(dataslide);
+		$(".nav-collapse").collapse('hide');
+	});
+
+	$(document).scroll(function(event) {
+		var location = $(this).scrollTop();
+		var tops = [];
+							
+		$('.slide').each(function(index, element) {
+			tops.push( $(element).offset().top);
+		});
+
+		for (i = 0; i < 4; i++){
+			if (i < 3){
+				if (location >= tops[i] && location < tops[i+1]){
+					setMenu(i);
+					break;
+			   }
+			} else {
+				setMenu(i);
+			}
+		}
+	});
+
+});
+
+function setMenu(element){
+	var current = element + 1;
+
+	for (i = 1; i < 5; i++){
+		if (i == current){
+			$(".navbar li[data-slide='"+ i + "'] a").addClass('active');
+		} else {
+			if ($(".navbar li[data-slide='"+ i + "'] a").hasClass('active')){
+				$(".navbar li[data-slide='"+ i + "'] a").removeClass('active');
+			}
+		}
+	}
+}
