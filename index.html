@@ -53,7 +53,7 @@
                       <li><a href="#">About Me</a></li>
                       <li><a href="#">My Work</a></li>
                       <li><a href="#">Resume</a></li>
-                      <li id="contactMe"><button type="button" class="btn btn-clear"><i class="fa fa-envelope fa-2x"></i></button></li>
+                      <li id="contactMe"><button type="button" class="btn btn-clear" data-toggle="modal" data-target="#contactMeModal"><i class="fa fa-envelope fa-2x"></i></button></li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -65,7 +65,7 @@
         </div>
       </div><!-- /slide1 -->
 
-      <div class="slide story" id="slide-2">
+      <div class="slide story" id="slide-2" data-slide="2">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <h1 class="home-section-title">About Me</h1>
@@ -104,17 +104,47 @@
           </div>
       </div><!--slide2-->
 
-      <div class="slide story" id="slide-3">
+      <div class="slide story" id="slide-3" data-slide="3">
       <!--   <div class="row"> -->
           <h1 class="home-section-title">My Work</h1>
           <!-- === SLide 3 - Portfolio -->
           <div id="portfolio">
             <div class="row">
-              <div class="col-12 col-sm-6 col-lg-2"><a href=""><img class="thumb" class="img-responsive" src="assets/img/portfolio/Android-Screen-mock.jpg" alt=""></a></div>
-              <div class="col-12 col-sm-6 col-lg-2"><a href=""><img class="thumb" class="img-responsive" src="assets/img/portfolio/download-add-prompt.jpg" alt=""></a></div>
-              <div class="col-12 col-sm-6 col-lg-2"><a href=""><img class="thumb" class="img-responsive" src="assets/img/portfolio/new-infiniteTab-screen.jpg" alt=""></a></div>
-              <div class="col-12 col-sm-6 col-lg-2"><a href=""><img class="thumb" class="img-responsive" src="assets/img/portfolio/Android-Screen-mock.jpg" alt=""></a></div>
-              <div class="col-12 col-sm-6 col-lg-2"><a href=""><img class="thumb" class="img-responsive" src="assets/img/portfolio/download-add-prompt.jpg" alt=""></a></div>
+              <figure>
+                <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" class="img-responsive" src="assets/img/portfolio/Android-Screen-mock.jpg" alt=""></div>
+                <figcaption>
+                  <p>Brit + Co. <br />Android App Redesign</p>
+                  <a href="#">view more</a>
+                </figcatpion>
+              </figure>
+              <figure>
+                <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" class="img-responsive" src="assets/img/portfolio/download-add-prompt.jpg" alt=""></div>
+                <figcaption>
+                  <p>Brit + Co.<br />Download App Prompt</p>
+                  <a href="#">view more</a>
+                </figcatpion>
+              </figure>
+              <figure>
+                <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" class="img-responsive" src="assets/img/portfolio/new-infiniteTab-screen.jpg" alt=""></div>
+                <figcaption>
+                  <p>Brit + Co.<br />Infinite Scroll Tab</p>
+                  <a href="#">view more</a>
+                </figcatpion>
+              </figure>
+              <figure>
+                <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" class="img-responsive" src="assets/img/portfolio/Android-Screen-mock.jpg" alt=""></div>
+                <figcaption>
+                  <p></p>
+                  <a href="#">view more</a>
+                </figcatpion>
+              </figure>
+              <figure>
+                <div class="col-12 col-sm-6 col-lg-2"><img class="thumb" class="img-responsive" src="assets/img/portfolio/download-add-prompt.jpg" alt=""></div>
+                <figcaption>
+                  <p></p>
+                  <a href="#">view more</a>
+                </figcatpion>
+              </figure>
             </div>
           </div>
           <div id="controls">
@@ -125,7 +155,7 @@
        <!--  </div> -->
       </div><!--slide3-->
 
-      <div class="slide story" id="slide-4">
+      <div class="slide story" id="slide-4" data-slide="4">
         <div class="row">
           <div class="home-section-title">
             <h1>Resume</h1>
@@ -210,6 +240,20 @@
       </div>
     </div>
     
+    <!--modal-->
+    <div class="modal fade" id="contactMeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h1 class="modal-title" id="myModalLabel">Contact Me</h1>
+          </div>
+          <div class="modal-body">
+            I don’t bite! Shoot me a message at: <a href="mailto:r.maggie.cai@gmail.com">r.maggie.cai@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -21,8 +21,8 @@ $(function() {
 	var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
 	$(window).resize(function() {
 		delay(function() {
-				var gallery_images = $('#portfolio img');
-				var gallery_width = gallery_images.width() * gallery_images.length;
+				var gallery_images = $('#portfolio figure');
+				var gallery_width = gallery_images.width() * gallery_images.length + 20;
 				
 				$('#portfolio .row').css('width', gallery_width );
 
@@ -133,3 +133,36 @@ function checkButtonStyle( rowPlacement, offSet ){
 
 	}
 };
+
+//sticky header
+$(document).ready(function($) {
+	$(document).scroll(function(){
+		var navHeight = $(window).height() - 70;
+		if ($(document).scrollTop() >= navHeight){
+			$('nav').addClass("navbar-fixed-top");
+			$('nav').removeClass('navbar-bottom');
+			$('#contactMe button').removeClass('btn-clear');
+			$('#contactMe button').addClass('btn-primary');
+		} else {
+			$('nav').removeClass("navbar-fixed-top");
+			$('nav').addClass('navbar-bottom');
+			$('#contactMe button').addClass('btn-clear');
+			$('#contactMe button').removeClass('btn-primary');
+		}
+
+		// $.when($(document).scrollTop() < navHeight).then(function(){
+		// 	$('nav').removeClass("sticky");
+		// });
+
+	});
+	
+});
+
+// $(window).scroll(function() {
+// 	if ($(this).scrollTop() > 1){  
+//     $('nav').addClass("sticky");
+//   }
+//   else{
+//     $('nav').removeClass("sticky");
+//   }
+// });
