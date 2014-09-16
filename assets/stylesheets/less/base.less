@@ -232,7 +232,11 @@ a{
 }
 
 #slide-2{
-	position: relative;
+	// position: relative;
+	margin-top: 0px;
+			-webkit-transition: margin-top .35s ease;
+            -o-transition: margin-top .35s ease;
+            transition: margin-top .35s ease;
 	.skill-sets{
 		text-align: center;
 		margin-top: 15px;
@@ -246,10 +250,10 @@ a{
 	}
 
 	&.movingDown{
-			top: 227px;
-			-webkit-transition: top .35s ease;
-            -o-transition: top .35s ease;
-            transition: top .35s ease;
+			margin-top: 227px;
+			-webkit-transition: margin-top .35s ease;
+            -o-transition: margin-top .35s ease;
+            transition: margin-top .35s ease;
 		}
 
 }
