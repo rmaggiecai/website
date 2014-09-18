@@ -10,16 +10,17 @@ $(document).ready(function() {
 	var setWindowHeight = function() {
 		return parseInt($(window).height());
 	};
-	if ($(window).width() > 768){
+	// if ($(window).width() > 768){
 			$('#slide-1').height(setWindowHeight);
 		$('#startImage').height(setWindowHeight);
 
-	} else {
-		var setHeight = 2*($('#slide-1 #title-info').height() + $('#slide-1 nav').height() + 65);
-		$('#slide-1').height(setHeight);
-		$('#startImage').height(setHeight);
+	// } else {
+		// var setHeight = 1.6*($('#slide-1 #title-info').height() + $('#slide-1 nav').height());
+		// $('#slide-1').height(setHeight);
+		// $('#startImage').height(setHeight);
+		if ($(window).width() > 768)
 		$('.navbar-collapse').width($(window).width()-30);
-	}
+	//}
 
 });
 
@@ -144,17 +145,28 @@ function checkButtonStyle( rowPlacement, offSet ){
 //sticky header
 $(document).ready(function($) {
 	$(document).scroll(function(){
-		var navHeight = $(window).height() - 70;
+		var navHeight = 0;
+
+		if (window.location.pathname == "/"){
+			if ($(window).width() <= 768){
+				navHeight= $("#slide-1").height() - 53;
+			} else {
+				navHeight= $(window).height() - 70;
+			}
+		} else {
+			navHeight = $("nav").height();
+		}
+
 		if ($(document).scrollTop() >= navHeight){
 			$('nav').addClass("navbar-fixed-top");
 			$('nav').removeClass('navbar-bottom');
-			$('#contactMe button').removeClass('btn-clear');
+			$('#slide-1 #contactMe button').removeClass('btn-clear');
 			$('#contactMe button').addClass('btn-primary');
 		} else {
 			$('nav').removeClass("navbar-fixed-top");
 			$('nav').addClass('navbar-bottom');
-			$('#contactMe button').addClass('btn-clear');
-			$('#contactMe button').removeClass('btn-primary');
+			$('#slide-1 #contactMe button').addClass('btn-clear');
+			$('#slide-1 #contactMe button').removeClass('btn-primary');
 		}
 
 	});
@@ -174,8 +186,12 @@ jQuery(document).ready(function ($) {
 	//easing plugin is also used, so we passed in the easing method of 'easeInOutQuint' which is available throught the plugin.
 	function goToByScroll(dataslide) {
 		// console.log('.slide[data-slide="' + dataslide + '"]');
-		var offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
-		
+		var offset_top = 0;
+		if ($(window).width() <= 768){
+			offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top-227;
+		} else {
+			offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
+		}
 		htmlbody.stop(false, false).animate({
 			scrollTop: offset_top
 		}, 1500, 'easeInOutQuart');
@@ -186,16 +202,19 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 		var dataslide = $(this).attr('data-slide');
 		goToByScroll(dataslide);
-		$(".nav-collapse").collapse('hide');
+		if ($(window).width() <= 768){
+			$(".navbar-collapse").collapse('hide');
+		$("#slide-2").toggleClass('movingDown');
+		}
 	});
 	
 	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
-	$('.navigation-slide').click(function (e) {
-		e.preventDefault();
-		var dataslide = $(this).attr('data-slide');
-		goToByScroll(dataslide);
-		$(".nav-collapse").collapse('hide');
-	});
+	// $('.navigation-slide').click(function (e) {
+	// 	e.preventDefault();
+	// 	var dataslide = $(this).attr('data-slide');
+	// 	goToByScroll(dataslide);
+	// 	$(".collapse").collapse();
+	// });
 
 	$(document).scroll(function(event) {
 		var location = $(this).scrollTop();
@@ -234,12 +253,21 @@ function setMenu(element){
 }
 
 //shift page when open nav in .navbar-bottom
-$(document).ready(function(){
-	if ($(window).width() <= 768){
-		$('.navbar-bottom button').click(function(){
+// $(document).ready(function(){
+// 	if ($(window).width() <= 768){
+// 		$('.navbar-bottom button').click(function(){
 
-				$("#slide-2").toggleClass('movingDown');
+// 				$("#slide-2").toggleClass('movingDown');
  
-		});
-	}
-})
+// 		});
+// 	}
+// });
+
+$('.navbar-bottom button').click(function(){
+	if ($(window).width() <= 768)
+		$("#slide-2").toggleClass('movingDown');
+
+});
+
+
+
