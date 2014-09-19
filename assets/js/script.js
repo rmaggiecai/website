@@ -18,7 +18,7 @@ $(document).ready(function() {
 		// var setHeight = 1.6*($('#slide-1 #title-info').height() + $('#slide-1 nav').height());
 		// $('#slide-1').height(setHeight);
 		// $('#startImage').height(setHeight);
-		if ($(window).width() > 768)
+		if ($(window).width() <= 768)
 		$('.navbar-collapse').width($(window).width()-30);
 	//}
 

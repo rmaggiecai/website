@@ -53,12 +53,12 @@ h3 {
 	color: @gray3;
 	text-transform: lowercase;
 	font-size: 2.1em;
-	margin-top: 45px;
+	margin-top: 0.5em;
 }
 
 //section title for article change
 h4{
-	font-size: 4em;
+	font-size: 3em;
 }
 
 h5{
@@ -70,6 +70,12 @@ h5{
 
 p{
 	font-size: 1em;
+
+	&.disclaimer{
+		color:@gray3;
+		font-size: 0.8em;
+		text-align: center;
+	}
 }
 
 a{
@@ -548,8 +554,100 @@ a{
 }
 
 .portfolio{
+	margin:0 20px;
 	.title{
-		margin-left: 5em;
+		@media(min-width:992px){
+			margin-left: 5em;
+		} 
+		@media(min-width: 768px){
+			margin-left: 2em;
+		}
+		
+	}
+
+	.portfolio-story{
+		
+
+	}
+
+	h4{
+		text-align: center;
 	}
 }
+
+.img-right{
+	float: right;
+	margin-right: -35px;
+}
+
+//parallax
+.portfolio-cover-img{
+	background-image: url("../../img/bc-android/newapp.png");
+		background-repeat: no-repeat;
+		background-position: center top;
+
+	// height: 500px;
+
+	p{
+		display: none;
+
+	}
+}
+.section{
+			margin-top: 150px;
+
+			@media(max-width:768px){
+				margin-top: 3em;
+			}	
+		}
+		
+		.sub-section{
+			@media(min-width:992px){
+				margin-top: 3em;
+			display: flex;
+			align-items:center;
+
+			}
+
+			// .text{
+			// 	@media(min-width:992px){
+			// 		margin-top: 20%;
+			// 	}
+				
+			// }
+
+			// .text-left{
+			// 	text-align: right;
+			// }
+		}
+
+#other-works{
+	position: relative;
+	margin-bottom: 100px;
+	margin-top: 200px;
+	border-top: 1px solid @gray4;
+	h4{
+		font-weight: 300;
+		font-size: 1.7em;
+		color: @gray1;
+
+	}
+
+	h1{
+		margin-bottom: 30px;
+		font-weight: normal;
+		margin-top: 90px;
+		margin-bottom:50px;
+		font-size: 2em;
+	}
+	.other-works-name{
+		@media(min-width:992px){
+			position: absolute;
+		bottom:0;
+		left: 50%;
+
+		}
+	}
+}
+
 
