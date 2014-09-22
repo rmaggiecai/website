@@ -306,7 +306,7 @@ a{
 
 	#portfolio {
 		margin: 0 auto;
-		overflow: hidden;
+		overflow: scroll;
 		padding: 0;
 		text-align: left;
 		width: 100%;
@@ -567,7 +567,7 @@ a{
 
 	.portfolio-story{
 		position: relative;
-		top:300px;
+		// top:300px;
 
 	}
 
@@ -595,32 +595,36 @@ a{
 	}
 }
 .section{
-			margin-top: 150px;
+	margin-top: 150px;
 
-			@media(max-width:768px){
-				margin-top: 3em;
-			}	
-		}
+	@media(max-width:768px){
+		margin-top: 3em;
+	}	
+}
+
+.sub-section{
+	@media(min-width:992px){
+		margin-top: 3em;
+	display: flex;
+	align-items:center;
+
+	}
+
+	// .text{
+	// 	@media(min-width:992px){
+	// 		margin-top: 20%;
+	// 	}
 		
-		.sub-section{
-			@media(min-width:992px){
-				margin-top: 3em;
-			display: flex;
-			align-items:center;
+	// }
 
-			}
+	// .text-left{
+	// 	text-align: right;
+	// }
+}
 
-			// .text{
-			// 	@media(min-width:992px){
-			// 		margin-top: 20%;
-			// 	}
-				
-			// }
-
-			// .text-left{
-			// 	text-align: right;
-			// }
-		}
+#about-project{
+	margin-top: 80px;
+}
 
 #other-works{
 	position: relative;
@@ -631,6 +635,7 @@ a{
 		font-weight: 300;
 		font-size: 1.7em;
 		color: @gray1;
+		text-align: left;
 
 	}
 

@@ -30,7 +30,7 @@ $(function() {
 	$(window).resize(function() {
 		delay(function() {
 				var gallery_images = $('#portfolio figure');
-				var gallery_width = gallery_images.width() * gallery_images.length + 20;
+				var gallery_width = gallery_images.width() * gallery_images.length + 25;
 				
 				$('#portfolio .row').css('width', gallery_width );
 
@@ -63,8 +63,8 @@ jQuery(document).ready(function ($) {
 	arrows.click(function(e) {
 		e.preventDefault();
 		
-		if ( $(this).hasClass('inactive') )
-			return;
+		// if ( $(this).hasClass('inactive') )
+		// 	return;
 		
 		var slide = null;
 		// var datasheet = $('.nav > li.active').data('slide');
@@ -272,5 +272,8 @@ $('.navbar-bottom button').click(function(){
 
 });
 
-
+$(document).ready(function(){
+	var parallaxHeight = $(window).height() - $(".title").offset().top - $(".title").height();
+	$(".gap").css("height",parallaxHeight);
+});
 

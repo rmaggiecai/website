@@ -29,8 +29,8 @@
     <div
     class="parallax-image-wrapper parallax-image-wrapper-100"
     data-anchor-target=".title + .gap"
-    data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-    data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+    data-top="background-position:0px"
+    data->
     <!--data-bottom-top="transform:translate3d(0px, 200%, 0px)"
     data-top-bottom="transform:translate3d(0px, 0%, 0px)"-->
 
@@ -38,6 +38,7 @@
         class="parallax-image parallax-image-100"
         style="background-image:url(assets/img/bc-android/newapp.png)"
         data-anchor-target=".title + .gap"
+        data-top="background-position: 50% 350px"
         data-bottom-top="transform: translate3d(0px, -80%, 0px);"
         data-top-bottom="transform: translate3d(0px, 80%, 0px);"
       ></div>
@@ -84,7 +85,7 @@
 
 
         <div class="portfolio-story content">
-          <div class="section" id="about the project">
+          <div class="section" id="about-project">
             <div class="row">
               <div class="col-md-offset-2 col-md-8">
                 <h4>About the Project</h4>
@@ -154,10 +155,7 @@
               </div>
             </div>
         </div>
-        
-      </div>
 
-      <div class="container-fluid">
         <div class="section"id="other-works">
           <h1 class="col-md-offset-1">Other Projects</h1>
           <div class="row">
@@ -170,7 +168,23 @@
           </a>
           </div>
         </div>
+        
       </div>
+
+      <!-- <div class="container-fluid">
+        <div class="section"id="other-works">
+          <h1 class="col-md-offset-1">Other Projects</h1>
+          <div class="row">
+            <a href="#"><div class="col-md-5 col-md-offset-1">
+              <img class="img-responsive" src="assets/img/portfolio/Android-Screen-mock.jpg" alt="">
+            </div>
+            <div class="col-md-5 other-works-name">
+              <h4>Brit + Co. <br />Android App Redesign</h4>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div> -->
 
     </div>
 
@@ -211,10 +225,11 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/skrollr.js"></script>
     <script type="text/javascript">
-    skrollr.init({
-    smoothScrolling: false,
-    mobileDeceleration: 0.004
-  });
+      skrollr.init({
+        smoothScrolling: false,
+        mobileDeceleration: 0.004
+      });
+
     </script>
     <script src="assets/js/script.js"></script>
 
