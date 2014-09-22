@@ -24,6 +24,30 @@
     <![endif]-->
   </head>
   <body>
+
+    <!--parallax-->
+    <div
+    class="parallax-image-wrapper parallax-image-wrapper-100"
+    data-anchor-target=".title + .gap"
+    data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+    data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+    <!--data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+    data-top-bottom="transform:translate3d(0px, 0%, 0px)"-->
+
+      <div
+        class="parallax-image parallax-image-100"
+        style="background-image:url(assets/img/bc-android/newapp.png)"
+        data-anchor-target=".title + .gap"
+        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+      ></div>
+      <!--the +/-80% translation can be adjusted to control the speed difference of the image
+
+    -->
+    </div>
+
+  <div id="skrollr-body">
+
     <nav class="navbar navbar-bottom" role="navigation" id="portfolio-pieces">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -39,7 +63,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-left">
-            <li class="active"><a href="/"><span class="glyphicon glyphicon-arrow-left"></span> Home</a></li>
+            <li class="active"><a href="/#slide-3"><span class="glyphicon glyphicon-arrow-left"></span> Home</a></li>
           </ul>
         
           <ul class="nav navbar-nav navbar-right">
@@ -49,14 +73,17 @@
       </div><!-- /.container-fluid -->
     </nav>
     <div class="container-fluid portfolio">
-            <div class="title">
+        <div class="title content">
           <h1>Android App Redesign</h1>
-        <h2>for Brit + Co.</h2>
+          <h2>for Brit + Co.</h2>
         </div>
-         <div class="gap gap-100 portfolio-cover-img">
+         <div class="gap gap-100" id="portfolio-cover-img">
           <p>hi</p>
           </div>
-        <div class="portfolio-story">
+
+
+
+        <div class="portfolio-story content">
           <div class="section" id="about the project">
             <div class="row">
               <div class="col-md-offset-2 col-md-8">
@@ -100,7 +127,7 @@
                 <div class="col-md-5 col-md-offset-1 text text-left">
                   <h3>Increase Engagement</h3>
 
-                  <p >I wanted to increase interactions between our users and the app for a more engaging experience. I wanted to encourage users to comment, share, and favor articles by bringing these action buttons together and place it in a easy to reach area.
+                  <p >I wanted to increase interactions between our users and the app for a more engaging experience. I wanted to encourage users to comment, share, and favor articles by bringing these action buttons together and place it in an easy to reach area.
                     I also wanted to guide the interaction by creating visual hierarchy using color and button size.</p>
                 </div>
               </div>
@@ -111,7 +138,7 @@
               <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                   <h4>Original Wireframes</h4>
-                  <p>I worked on the conceptualization stage and worked with the lead designer to deliver the final product. Below are original wireframes.</p>
+                  <p>I worked worked with the lead designer to deliver the final product. Below are original wireframes I created.</p>
                 </div>
               </div>
               <div class="row sub-section">
@@ -144,6 +171,8 @@
           </div>
         </div>
       </div>
+
+    </div>
 
        <footer class="footer">
       <div class="container">
@@ -182,7 +211,10 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/skrollr.js"></script>
     <script type="text/javascript">
-    // var s = skrollr.init();
+    skrollr.init({
+    smoothScrolling: false,
+    mobileDeceleration: 0.004
+  });
     </script>
     <script src="assets/js/script.js"></script>
 
