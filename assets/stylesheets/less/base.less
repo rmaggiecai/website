@@ -74,7 +74,7 @@ p{
 	&.disclaimer{
 		color:@gray3;
 		font-size: 0.8em;
-		text-align: center;
+		// text-align: center;
 	}
 }
 
@@ -585,8 +585,7 @@ a{
 }
 
 //parallax
-#portfolio-cover-img{
-	background-image: url("../../img/bc-android/newapp.png");
+[id^="portfolio-cover-img-"]{
 		background-repeat: no-repeat;
 		background-position: center top;
 		height:450px;
@@ -597,6 +596,15 @@ a{
 		display: none;
 
 	}
+}
+
+#portfolio-cover-img-android{
+	background-image: url("../../img/bc-android/newapp.png");
+}
+
+#portfolio-cover-img-infiniteScroll{
+	background-image: url("../../img/bc-infiniteScroll/prototypes-related.jpg");
+	width:100%;
 }
 .section{
 	margin-top: 150px;
