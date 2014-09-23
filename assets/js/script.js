@@ -74,57 +74,51 @@ jQuery(document).ready(function ($) {
 		
 		switch( $(this).attr('id') ) {
 			case 'left':
-				offset_left = $('#portfolio .row').offset().left + 452;
-				if ( offset_left >= 0 ) {
-					offset_left = '0px';
-				}
-
-
+				offset_left = $('#portfolio').scrollLeft() - 452;
 
 				break;
 			case 'right':
-				offset_left = $('#portfolio .row').offset().left - 452;
-				if ( offset_left < $('body').width() - $('#portfolio .row').width() ) {
-					offset_left = $('body').width() - $('#portfolio .row').width();
-				}
+				offset_left = $('#portfolio').scrollLeft() + 452;
 				
 				break;
 		}
 				
 		if ( offset_left != false ) {
+			// offset_left = offset_left * -1;
 			if ( $('#portfolio .row').width() != $('body').width() ) {
-				
-				($( "#portfolio .row" ).animate({
-				    left: offset_left
-				  }, 1500, 'easeInOutQuart' ))
+				console.log(offset_left);
+				$("#slide-3 #portfolio").animate({
+				    scrollLeft: offset_left
+				  }, 1500, 'easeInOutQuart' );
 				// $('#portfolio .row').stop(false, false).animate({
 				// 	left: "+=50"
 				// }, 1500, 'easeInOutQuart');
 			}
 		}
-		checkButtonStyle($('#portfolio .row'), offset_left);
+		checkButtonStyle(offset_left);
+	});
+
+	$("#slide-3 #portfolio").scroll(function(event) {
+		checkButtonStyle($(this).scrollLeft());
+		/* Act on the event */
 	});
 
 });
 
 function buttonStyle( button,active ){
-	console.log("buttonStyle");
 	if (active) 
 		$(button).removeClass('inactive');
 	else 
 		$(button).addClass('inactive');
 };
 
-function checkButtonStyle( rowPlacement, offSet ){
+function checkButtonStyle( placement ){
 	
-	console.log(rowPlacement.css('left'));
-	console.log(offSet);
-	var placement =parseInt(rowPlacement.css('left'));
-	if (offSet != "0px")
-		placement += offSet;
+	console.log(placement);
+	// var placement =parseInt(rowPlacement.scrollLeft());
 
 	
-	if (offSet =="0px"){
+	if (placement <= 0){
 
 		buttonStyle($('#controls #left'),false);
 		buttonStyle($('#controls #right'),true);
@@ -134,7 +128,7 @@ function checkButtonStyle( rowPlacement, offSet ){
 		// console.log($(rowPlacement).width());
 		// console.log(placement);
 
-		if ($(window).width() >= rowPlacement.width() + offSet)
+		if ($("#portfolio").width() <= placement)
 			buttonStyle($('#controls #right'),false);
 		else 
 			buttonStyle($('#controls #right'),true);
@@ -272,8 +266,4 @@ $('.navbar-bottom button').click(function(){
 
 });
 
-$(document).ready(function(){
-	var parallaxHeight = $(window).height() - $(".title").offset().top - $(".title").height();
-	$(".gap").css("height",parallaxHeight);
-});
 
