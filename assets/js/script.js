@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
 		var slide = null;
 		// var datasheet = $('.nav > li.active').data('slide');
 		// var offset_top = false;
-		var offset_left = false;
+		var offset_left;
 		
 		
 		switch( $(this).attr('id') ) {
@@ -82,18 +82,12 @@ jQuery(document).ready(function ($) {
 				
 				break;
 		}
-				
-		if ( offset_left != false ) {
-			// offset_left = offset_left * -1;
-			if ( $('#portfolio .row').width() != $('body').width() ) {
-				console.log(offset_left);
-				$("#slide-3 #portfolio").animate({
-				    scrollLeft: offset_left
-				  }, 1500, 'easeInOutQuart' );
-				// $('#portfolio .row').stop(false, false).animate({
-				// 	left: "+=50"
-				// }, 1500, 'easeInOutQuart');
-			}
+
+		if ( $('#portfolio .row').width() != $('body').width() ) {
+			console.log("animation");
+			$("#slide-3 #portfolio").animate({
+			    scrollLeft: offset_left
+			  }, 1500, 'easeInOutQuart' );
 		}
 		checkButtonStyle(offset_left);
 	});
@@ -114,7 +108,7 @@ function buttonStyle( button,active ){
 
 function checkButtonStyle( placement ){
 	
-	console.log(placement);
+	// console.log(placement);
 	// var placement =parseInt(rowPlacement.scrollLeft());
 
 	

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>R. Maggie Cai Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="description" content="UX/UI Designer">
+    <meta name="keywords" content="product designer user experience UX UI interaction front end front-end developer researcher">
 
     <!-- Bootstrap -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +28,7 @@
   </head>
   <body id="infiniteScroll">
 
-    <nav class="navbar navbar-bottom" role="navigation" id="portfolio-pieces">
+     <nav class="navbar navbar-bottom" role="navigation" id="portfolio-pieces">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -39,12 +42,14 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-left">
-            <li class="active"><a href="/#slide-3"><span class="glyphicon glyphicon-arrow-left"></span> Home</a></li>
+          <ul class="nav navbar-nav navbar-left">
+            <li class="active"><a href="/#slide-3"><span class="hidden-xs glyphicon glyphicon-arrow-left"></span> Home</a></li>
+            <span class="visible-xs line"></span>
           </ul>
         
           <ul class="nav navbar-nav navbar-right">
-            <li id="contactMe"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactMeModal"><i class="fa fa-envelope fa-lg"></i></button></li>
+            <li id="contactMe"><button type="button" class="hidden-xs btn btn-primary" data-toggle="modal" data-target="#contactMeModal"><i class="fa fa-envelope fa-lg"></i></button>
+              <a class="visible-xs" type="button" data-toggle="modal" data-target="#contactMeModal"><i class="fa fa-envelope fa-lg"></i></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -67,7 +72,7 @@
               <div class="col-md-offset-2 col-md-8">
                 <h4>About the Project</h4>
                 <p>Infinite scroll at the bottom of each article was introduced to create a continuous reading experience. Since there are limited number of related- reads, the infinite scroll also contains popular reads and latest posts so that users will never reach a dead end.<br />
-              <br />The tabs indicate what type of articles are being displayed. Users can also navigate through the different type of articles by clicking on the tabs. However, some users do come across difficulties when using these tabs.<br/> <br />
+              <br />The tabs indicate what type of articles are being displayed. Users can also filter through the different types of articles by clicking on the tabs. However, some users get confused when using these tabs.<br/> <br />
               Using heuristic evaluation by Jakob Nielsen, I identified 3 problems with the original design:</p>
               <img src="assets/img/bc-infiniteScroll/original-section.jpg" class="img-responsive" id="original" alt="Responsive image">
 
@@ -108,7 +113,7 @@
               <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                   <h4>Proposed Design</h4>
-                  <p>After looking at different tab-style navigations, I came up with this final design. I introduced a horizontal line in the same color as the active tab, connecting the tab with content displayed. I made the inactive tabs smaller to create depth. This illusion helps the active tab stand out from the inactive tabs. It also creates layers, similar to the way dividers stacks inside a binder. To further differentiate active tabs from inactive tabs, only the active tab is in color. <br /> <br />
+                  <p>After looking at different tab-style navigations, I came up with this final design. I introduced a horizontal line in the same color as the active tab. This line visually connects the content displayed with the active tab. I made the inactive tabs smaller to create depth. This illusion helps the active tab stand out from the inactive tabs. It also creates layers, similar to the way dividers stack inside a binder. To further differentiate active tab from inactive tabs, only the active tab is in color. <br /> <br />
                 I wanted to keep the hover state animation consistent, thus it resembles those used for the main navigation bar and the social icons.</p>
                 </div>
               </div>

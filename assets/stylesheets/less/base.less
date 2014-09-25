@@ -95,6 +95,7 @@ a{
 		background-image: url("../../img/main-banner.jpg");
 		background-repeat: no-repeat;
 		background-position: center center;
+		background-size: cover;
 
 		.img-filter{
 		background-color: @cover;
@@ -646,6 +647,10 @@ a{
 #portfolio-cover-img-diaryStudy{
 	background-image: url("/assets/img/bc-research/diary.jpg");
 }
+
+#portfolio-cover-img-timeline{
+	background-image: url("/assets/img/mongo-timeline/timeline-browser.png");
+}
 .section{
 	margin-top: 150px;
 
@@ -755,4 +760,10 @@ span.line{
 	border-bottom: 1px solid @gray4;
 	opacity: 0.65;
 	margin: 7px;
+}
+
+.text-right{
+	@media(max-width:768px){
+		text-align: left;
+	}
 }
