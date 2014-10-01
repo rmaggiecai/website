@@ -80,13 +80,13 @@
                 </div>
 
                 <div class="col-md-4 col-md-offset-2">
-                  <img src="assets/img/bc-android/Samsong-Home-with-swipe.png" class="img-responsive img-right" alt="Responsive image">
+                  <img src="assets/img/bc-android/Samsong-Home-with-swipe.png" class="img-responsive img-right" data-target="4" alt="Responsive image">
                 </div>
               </div>
 
               <div class="row sub-section">
                 <div class="col-md-8">
-                  <img src="assets/img/bc-android/related-reads2.jpg" class="img-responsive img-left" alt="Responsive image">
+                  <img src="assets/img/bc-android/related-reads2.jpg" class="img-responsive img-left" data-target="8" alt="Responsive image">
                 </div>
                 <div class="col-md-4 text text-left">
                   <h3>effective layout</h3>
@@ -104,7 +104,7 @@
               </div>
               <div class="row sub-section">
                 <div class="col-md-4">
-                  <img src="assets/img/bc-android/article-page.png" class="img-responsive" alt="Responsive image">
+                  <img src="assets/img/bc-android/article-page.png" class="img-responsive" alt="Responsive image" data-target="4">
                 </div>
                 <div class="col-md-5 col-md-offset-1 text text-left">
                   <h3>Increase Interaction</h3>
@@ -125,26 +125,32 @@
               </div>
               <div class="row sub-section">
                 <div class="col-md-4">
-                  <img src="assets/img/bc-android/1-main_feed_with_nav.png" class="img-responsive" alt="Responsive image">
+                  <img src="assets/img/bc-android/1-main_feed_with_nav.png" class="img-responsive" alt="Responsive image" data-target="4">
                 </div>
                 <div class="col-md-4">
-                  <img src="assets/img/bc-android/2-article_page.png" class="img-responsive" alt="Responsive image">
+                  <img src="assets/img/bc-android/2-article_page.png" class="img-responsive" alt="Responsive image" data-target="4">
                 </div>
                 <div class="col-md-4">
-                  <img src="assets/img/bc-android/3-related_posts.png" class="img-responsive" alt="Responsive image">
+                  <img src="assets/img/bc-android/3-related_posts.png" class="img-responsive" alt="Responsive image" data-target="4">
                 </div>
               </div>
             </div>
         </div>
 
         <div class="section"id="other-works">
-          <h1 class="col-md-offset-1">Other Projects</h1>
+          <h1>Suggested Projects</h1>
           <div class="row">
-            <a href="mongo-alerts.html"><div class="col-md-5 col-md-offset-1">
-              <img class="img-responsive" src="assets/img/portfolio/banner-alerts.jpg" alt="">
+            <div class="col-md-5">
+              <a href="/bc-research.html">
+                <img class="img-responsive" src="assets/img/portfolio/diary-cover-image.jpg" alt="">
+                <h4>Brit + Co. <br />Diary Study</h4>
+              </a>
             </div>
-            <div class="col-md-5 other-works-name">
-              <h4>MongoDB <br />Open Alerts Feed Design</h4>
+            <div class="col-md-5 col-md-offset-2">
+              <a href="/bc-research.html">
+                <img class="img-responsive" src="assets/img/portfolio/banner-alerts.jpg" alt="">
+                <h4>MongoDB <br />Open Alerts Feed Design</h4>
+              </a>
             </div>
           </a>
           </div>
@@ -203,6 +209,17 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          var rowWidth = $("#about-project").width();
+          $(".sub-section").width(rowWidth);
+
+          $(".img-responsive").each(function(){
+            var imgWidth = rowWidth/12*$(this).attr('data-target');
+            $(this).width(imgWidth);
+          });
+      });
+    </script>
 
   </body>
 </html>
