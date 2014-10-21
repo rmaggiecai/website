@@ -146,15 +146,10 @@ $(document).ready(function($) {
 		}
 
 		if ($(document).scrollTop() >= navHeight){
-			$('nav').addClass("navbar-fixed-top");
-			$('nav').removeClass('navbar-bottom');
-			$('#slide-1 #contactMe button').removeClass('btn-clear');
-			$('#contactMe button').addClass('btn-primary');
+			$('nav').removeClass('navbar-clear');
 		} else {
-			$('nav').removeClass("navbar-fixed-top");
-			$('nav').addClass('navbar-bottom');
-			$('#slide-1 #contactMe button').addClass('btn-clear');
-			$('#slide-1 #contactMe button').removeClass('btn-primary');
+			$('nav').addClass('navbar-clear');
+
 		}
 
 	});

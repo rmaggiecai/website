@@ -27,6 +27,35 @@
     <![endif]-->
   </head>
   <body>
+   <nav class="navbar navbar-fixed-top navbar-clear" role="navigation">
+      <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        <button type="button" class="btn-primary navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li data-slide="2"><a href="#slide-2">About Me</a></li>
+            <span class="visible-xs line"></span>
+            <li data-slide="3"><a href="#slide-3">My Work</a></li>
+            <span class="visible-xs line"></span>
+            <li data-slide="4"><a href="#slide-4">Resume</a></li>
+            <span class="visible-xs line"></span>
+            <li id="contactMe">
+              <button type="button" class="hidden-xs btn btn-primary" data-toggle="modal" data-target="#contactMeModal"><i class="fa fa-envelope fa-lg"></i></button>
+              <a class="visible-xs" type="button" data-toggle="modal" data-target="#contactMeModal"><i class="fa fa-envelope fa-lg"></i></a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
     <div class="container-fluid">
       
       <div class="slide" id="slide-1" data-slide="1">
@@ -38,35 +67,7 @@
                 <h2>UX/UI Designer & Problem Solver</h2>
               </div>
 
-              <nav class="navbar navbar-bottom" role="navigation">
-                <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                  <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  </div>
-
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                      <li data-slide="2"><a href="#slide-2">About Me</a></li>
-                      <span class="visible-xs line"></span>
-                      <li data-slide="3"><a href="#slide-3">My Work</a></li>
-                      <span class="visible-xs line"></span>
-                      <li data-slide="4"><a href="#slide-4">Resume</a></li>
-                      <span class="visible-xs line"></span>
-                      <li id="contactMe">
-                        <button type="button" class="hidden-xs btn btn-clear" data-toggle="modal" data-target="#contactMeModal"><i class="fa fa-envelope fa-lg"></i></button>
-                        <a class="visible-xs" type="button" data-toggle="modal" data-target="#contactMeModal"><i class="fa fa-envelope fa-lg"></i></a>
-                      </li>
-                    </ul>
-                  </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-              </nav>
+              
 
 
             </div><!-- /col-12 -->
