@@ -103,11 +103,23 @@ a{
 		}
 	}
 
-	&.movingUp{
-		margin-top: -227px;
-		-webkit-transition: margin-top .35s ease;
-        -o-transition: margin-top .35s ease;
-        transition: margin-top .35s ease;
+	
+	@media(max-width: 798px){
+		height: 300px;
+		-webkit-transition: height .35s ease;
+        -o-transition: height .35s ease;
+        transition: height .35s ease;
+
+		#startImage{
+			height: 300px;
+		}
+	}
+
+	&.movingDown{
+			height: 527px;
+			-webkit-transition: height .35s ease;
+            -o-transition: height .35s ease;
+            transition: height .35s ease;
 	}
 
 	margin-top: 0px;
@@ -123,6 +135,17 @@ a{
 	#title-info{
 		position: absolute;
 		top: 35%;
+		margin-top: 0px;
+		-webkit-transition: margin-top .35s ease;
+        -o-transition: margin-top .35s ease;
+        transition: margin-top .35s ease;
+
+		&.movingDown{
+			margin-top: 227px;
+			-webkit-transition: margin-top .35s ease;
+            -o-transition: margin-top .35s ease;
+            transition: margin-top .35s ease;
+		}
 		// left: 40px;
 	}
 	// .navbar-bottom{
@@ -203,16 +226,16 @@ a{
 		margin: 0px 15px;
 	}
 
-	button.navbar-toggle{
-		border-color: @gray4;
-		span{
-			background: @gray4;
-		}
+	// button.navbar-toggle{
+	// 	border-color: @gray4;
+	// 	span{
+	// 		background: @gray4;
+	// 	}
 
-		&:focus{
+	// 	&:focus{
 
-		}
-	}
+	// 	}
+	// }
 
 }
 
@@ -245,13 +268,6 @@ a{
 	}
 	h5{
 		margin-top: 30px;
-	}
-
-	&.movingDown{
-			margin-top: 227px;
-			-webkit-transition: margin-top .35s ease;
-            -o-transition: margin-top .35s ease;
-            transition: margin-top .35s ease;
 	}
 
 }
@@ -541,6 +557,10 @@ a{
 
 	@media(max-width:798px){
 		padding:0;
+
+		li a{
+			padding-right: 25px;
+		}
 	}
 
 	.navbar-left{
@@ -565,15 +585,15 @@ a{
 	}
 
 	button.navbar-toggle{
-		.btn-primary;
+		
 		span{
-			background: @gray5;
+			background: @gray1;
 		}
 	}
 
 	li#contactMe{
-		margin-top: 8px;
-		margin-left: 8px;
+		margin-top: 7px;
+		margin-left: 9px;
 	}
 
 	li.active{
@@ -585,8 +605,8 @@ a{
 	&.navbar-clear{
 	background: rgba(65,66,66,.4);
 	box-shadow: none;
-	-webkit-transition: background 0.55s ease;
-	transition: background 0.55s ease;
+	-webkit-transition: background 0.35s ease;
+	transition: background 0.35s ease;
 		a {
 			color: @gray4;
 
@@ -601,6 +621,20 @@ a{
 			color: @gray4;
 	
 
+		}
+
+		&.darker{
+			background: rgba(65,66,66,.75);
+			box-shadow: none;
+			-webkit-transition: background 0.35s ease;
+			transition: background 0.35s ease;
+		}
+
+		button.navbar-toggle{
+		
+			span{
+				background: @gray4;
+			}
 		}
 
 	}
