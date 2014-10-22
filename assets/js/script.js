@@ -164,11 +164,9 @@ jQuery(document).ready(function ($) {
 			// console.log('.slide[data-slide="' + dataslide + '"]');
 			var offset_top = 0;
 			if ($(window).width() <= 768){ 
-				if($("nav").hasClass('navbar-clear')){
-					offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
-				} else {
+				
 					offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top-227;
-				}
+
 				
 			} else {
 				offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
