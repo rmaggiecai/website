@@ -858,15 +858,15 @@ span.line{
 
 .persona{
 	height: 300px;
-	// width: 250px;
-	overflow: hidden;
+	width: 100%;
+	// overflow: hidden;
 	float: left;
-	margin-right: 20px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url("/assets/img/finder/ashley.jpg");
 
-	img{
-		height: 300px;
-		position: relative;
-		right: 71px;
+	p{
+		display: none;
 	}
 
 }
@@ -876,7 +876,10 @@ span.line{
 		margin-top: 45px;
 
 		&#name{
-			margin-top: 0px;
+			@media(min-width: 992px){
+				margin-top: 0px;
+			}
+			
 		}
 	}
 }
