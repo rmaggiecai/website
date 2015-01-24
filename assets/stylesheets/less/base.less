@@ -723,6 +723,11 @@ a{
 
 #portfolio-cover-img-finder{
 	background-image: url("/assets/img/finder/finder-cover-image.png");
+	background-size: 400px 723px;
+
+	@media(max-width:768px){
+		background-size: 350px;
+	}
 }
 
 #portfolio-cover-img-serendipity{
@@ -864,6 +869,12 @@ span.line{
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-image: url("/assets/img/finder/ashley.jpg");
+
+	@media(max-width:768px){
+		background-image: url("/assets/img/finder/ashley-sm.jpg");
+		height: 150px;
+		margin-bottom: 1em;
+	}
 
 	p{
 		display: none;
