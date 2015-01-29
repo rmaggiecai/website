@@ -11,8 +11,8 @@ $(document).ready(function() {
 		return parseInt($(window).height());
 	};
 	if ($(window).width() > 768){
-			$('#slide-1').height(setWindowHeight);
-		$('#startImage').height(setWindowHeight);
+			// $('#slide-1').height(setWindowHeight);
+		// $('#startImage').height(setWindowHeight);
 
 	}
 
