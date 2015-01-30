@@ -48,81 +48,119 @@ var delay = (function(){
 	};
 })();
 
-//navigation/ button clicks
-jQuery(document).ready(function ($) {
-	//Cache some variables
+// //navigation/ button clicks
+// jQuery(document).ready(function ($) {
+// 	//Cache some variables
 	
-	var arrows = $('#controls button');
+// 	var arrows = $('#controls button');
 	
-	arrows.click(function(e) {
-		e.preventDefault();
+// 	arrows.click(function(e) {
+// 		e.preventDefault();
 		
-		// if ( $(this).hasClass('inactive') )
-		// 	return;
+// 		// if ( $(this).hasClass('inactive') )
+// 		// 	return;
 		
-		var slide = null;
-		// var datasheet = $('.nav > li.active').data('slide');
-		// var offset_top = false;
-		var offset_left;
+// 		var slide = null;
+// 		// var datasheet = $('.nav > li.active').data('slide');
+// 		// var offset_top = false;
+// 		var offset_left;
 		
 		
-		switch( $(this).attr('id') ) {
-			case 'left':
-				offset_left = $('#portfolio').scrollLeft() - 452;
+// 		switch( $(this).attr('id') ) {
+// 			case 'left':
+// 				offset_left = $('#portfolio').scrollLeft() - 452;
 
-				break;
-			case 'right':
-				offset_left = $('#portfolio').scrollLeft() + 452;
+// 				break;
+// 			case 'right':
+// 				offset_left = $('#portfolio').scrollLeft() + 452;
 				
-				break;
-		}
+// 				break;
+// 		}
 
-		if ( $('#portfolio .row').width() != $('body').width() ) {
-			console.log("animation");
-			$("#slide-3 #portfolio").animate({
-			    scrollLeft: offset_left
-			  }, 1500, 'easeInOutQuart' );
-		}
-		checkButtonStyle(offset_left);
-	});
+// 		if ( $('#portfolio .row').width() != $('body').width() ) {
+// 			console.log("animation");
+// 			$("#slide-3 #portfolio").animate({
+// 			    scrollLeft: offset_left
+// 			  }, 1500, 'easeInOutQuart' );
+// 		}
+// 		checkButtonStyle(offset_left);
+// 	});
 
-	$("#slide-3 #portfolio").scroll(function(event) {
-		checkButtonStyle($(this).scrollLeft());
-		/* Act on the event */
-	});
+// 	$("#slide-3 #portfolio").scroll(function(event) {
+// 		checkButtonStyle($(this).scrollLeft());
+// 		/* Act on the event */
+// 	});
 
+// });
+
+
+
+// function buttonStyle( button,active ){
+// 	if (active) 
+// 		$(button).removeClass('inactive');
+// 	else 
+// 		$(button).addClass('inactive');
+// };
+
+// function checkButtonStyle( placement ){
+	
+// 	// console.log(placement);
+// 	// var placement =parseInt(rowPlacement.scrollLeft());
+
+	
+// 	if (placement <= 0){
+
+// 		buttonStyle($('#controls #left'),false);
+// 		buttonStyle($('#controls #right'),true);
+// 	} else {
+
+// 		buttonStyle($('#controls #left'),true);
+// 		// console.log($(rowPlacement).width());
+// 		// console.log(placement);
+
+// 		if ($("#portfolio").width() <= placement)
+// 			buttonStyle($('#controls #right'),false);
+// 		else 
+// 			buttonStyle($('#controls #right'),true);
+
+// 	}
+// };
+
+$(document).ready(function(){
+  $('#portfolio').slick({
+   arrows:true,
+   dots: true,
+	  infinite: true,
+	  speed: 300,
+	  slidesToShow: 3,
+	  slidesToScroll: 3,
+	  responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true,
+	        dots: true
+	      }
+	    },
+	    {
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	    ]
+  });
 });
-
-function buttonStyle( button,active ){
-	if (active) 
-		$(button).removeClass('inactive');
-	else 
-		$(button).addClass('inactive');
-};
-
-function checkButtonStyle( placement ){
-	
-	// console.log(placement);
-	// var placement =parseInt(rowPlacement.scrollLeft());
-
-	
-	if (placement <= 0){
-
-		buttonStyle($('#controls #left'),false);
-		buttonStyle($('#controls #right'),true);
-	} else {
-
-		buttonStyle($('#controls #left'),true);
-		// console.log($(rowPlacement).width());
-		// console.log(placement);
-
-		if ($("#portfolio").width() <= placement)
-			buttonStyle($('#controls #right'),false);
-		else 
-			buttonStyle($('#controls #right'),true);
-
-	}
-};
 
 //sticky header
 $(document).ready(function($) {

@@ -16,6 +16,8 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link href="assets/stylesheets/css/base.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/slick-carousel/slick/slick-theme.css"/>
 
 
 
@@ -117,8 +119,9 @@
           <h1 class="home-section-title">My Work</h1>
           <!-- === SLide 3 - Portfolio -->
           <div id="portfolio">
-            <div class="row">
-              <div class="col-12 col-sm-6 col-lg-2">
+            <!-- <div class="row"> -->
+              <!-- <div class="col-12 col-sm-6 col-lg-2"> -->
+              <div>
                 <figure id="piece-1" data-slide="1">
                   <img class="thumb" class="img-responsive" src="assets/img/portfolio/finder.jpg" alt="">
                   <figcaption>
@@ -127,8 +130,9 @@
                   </figcatpion>
                 </figure>
               </div>
-              <div class="col-12 col-sm-6 col-lg-2">
-                <figure id="piece-1" data-slide="1">
+             <!--  <div class="col-12 col-sm-6 col-lg-2"> -->
+              <div>
+                <figure id="piece-2" data-slide="2">
                   <img class="thumb" class="img-responsive" src="assets/img/portfolio/Android-Screen-mock.jpg" alt="">
                   <figcaption>
                     <p>Brit + Co. <br />Android App Redesign</p>
@@ -136,8 +140,9 @@
                   </figcatpion>
                 </figure>
               </div>
-              <div class="col-12 col-sm-6 col-lg-2">
-                <figure>
+              <!-- <div class="col-12 col-sm-6 col-lg-2"> -->
+              <div>
+                <figure id="piece-3" data-slide="3">
                   <img class="thumb" class="img-responsive" src="assets/img/portfolio/banner-alerts.jpg" alt="">
                   <figcaption>
                     <p>MongoDB<br />Open Alerts Feed Design</p>
@@ -145,8 +150,9 @@
                   </figcatpion>
                 </figure>
               </div>
-              <div class="col-12 col-sm-6 col-lg-2">
-                <figure id="piece-1" data-slide="1">
+              <!-- <div class="col-12 col-sm-6 col-lg-2"> -->
+              <div>
+                <figure id="piece-4" data-slide="4">
                   <img class="thumb" class="img-responsive" src="assets/img/portfolio/serendipity-profile.jpg" alt="">
                   <figcaption>
                     <p>Serendipity App Design</p>
@@ -154,7 +160,8 @@
                   </figcatpion>
                 </figure>
               </div>
-              <div class="col-12 col-sm-6 col-lg-2">
+              <!-- <div class="col-12 col-sm-6 col-lg-2"> -->
+              <div>
                 <figure>
                   <img class="thumb" class="img-responsive" src="assets/img/portfolio/diary-cover-image.jpg" alt="">
                   <figcaption>
@@ -163,7 +170,8 @@
                   </figcatpion>
                 </figure>
               </div>
-              <div class="col-12 col-sm-6 col-lg-2">
+              <!-- <div class="col-12 col-sm-6 col-lg-2"> -->
+              <div>
                 <figure>
                   <img class="thumb" class="img-responsive" src="assets/img/portfolio/new-infiniteTab-screen.jpg" alt="">
                   <figcaption>
@@ -172,7 +180,8 @@
                   </figcatpion>
                 </figure>
               </div>
-              <div class="col-12 col-sm-6 col-lg-2">
+              <!-- <div class="col-12 col-sm-6 col-lg-2"> -->
+              <div>
                 <figure id="piece-1" data-slide="1">
                   <img class="thumb" class="img-responsive" src="assets/img/portfolio/timeline-banner.jpg" alt="">
                   <figcaption>
@@ -182,13 +191,13 @@
                 </figure>
               </div>
   
-            </div>
-          </div>
-          <div class='hidden-sm hidden-xs'id="controls">
+           <!--  </div> -->
+          </div> <!-- /portfolio -->
+          <!-- <div class='hidden-sm hidden-xs'id="controls">
             <button type="button" class="btn btn-link inactive" id="left"><span class="glyphicon glyphicon-chevron-left"></span></button>            
             <button type="button" class="btn btn-link" id="right"><span class="glyphicon glyphicon-chevron-right"></span></button>
 
-          </div>
+          </div> -->
        <!--  </div> -->
       </div><!--slide3-->
 
@@ -300,6 +309,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/node_modules/slick-carousel/slick/slick.min.js"></script>
 
 
   </body>
