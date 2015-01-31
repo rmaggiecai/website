@@ -34,6 +34,7 @@ h1{
 	font-weight: bold;
 	font-size: 3.5em;
 	margin-top: 190px;
+	margin-bottom: 0.5em;
 
 	@media(max-width:768px){
 		margin-top: 3em;
@@ -51,9 +52,13 @@ h2{
 
 h3 {
 	color: @gray3;
-	text-transform: capitalize;
-	font-size: 2.1em;
-	margin-top: 0.5em;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	font-size: 1.5em;
+	margin-top: 1.25em;
+	letter-spacing: 3px;
+	margin-bottom: 0.5em;
+	font-weight: 300;
 }
 
 //section title for article change
@@ -94,7 +99,7 @@ a{
 	@media (min-width:768px) {
 		background-image: url("../../img/main-banner.jpg");
 		// background-repeat: no-repeat;
-		// background-position: center center;
+		background-position: center center;
 		// background-size: cover;
 		width: 100%;
 		height: 100%;
@@ -110,6 +115,8 @@ a{
 
 	#home-row-1{
 		height: inherit;
+		background-color: @cover;
+		margin: 0px;
 		#startImage{
 			height: inherit;
 		}
@@ -144,8 +151,10 @@ a{
 
 	#title-info{
 		position: absolute;
-		top: 35%;
+		bottom: 35%;
 		margin-top: 0px;
+		width: 100%;
+		text-align: center;
 		-webkit-transition: margin-top .35s ease;
         -o-transition: margin-top .35s ease;
         transition: margin-top .35s ease;
@@ -287,10 +296,10 @@ a{
 }
 
 #slide-4{
-	.company{
-		color: @coral0;
-		font-weight: normal;
-	}
+	margin-bottom: 10em;
+		@media(max-width: 748px){
+			margin-bottom: 4em;
+		}
 
 	.des-location{
 		// margin-top: 15px;
@@ -327,6 +336,7 @@ a{
 }
  .footer{
  	background-color: @gray1;
+ 	padding: 20px 0px;
  	ul{
  		padding: 0px;
  	}
@@ -872,10 +882,13 @@ span.line{
 	background-position: center top;
 	background-image: url("/assets/img/finder/ashley.jpg");
 
+	@media(max-width:990px){
+		margin-bottom: 1em;
+	}
+
 	@media(max-width:768px){
 		background-image: url("/assets/img/finder/ashley-sm.jpg");
 		height: 150px;
-		margin-bottom: 1em;
 	}
 
 	p{
@@ -932,4 +945,11 @@ footer{
 .slick-prev:before,
 .slick-next:before{
 	color: @gray3 !important;
+}
+
+.center-paragraph{
+	max-width: 700px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
