@@ -69,7 +69,7 @@ $(document).ready(function($) {
 		// if (window.location.pathname == "/"){
 
 			if ($(document).scrollTop() > 0){
-				console.log("hi");
+				// console.log("hi");
 				$('nav').removeClass('navbar-clear');
 			} else {
 				$('nav').addClass('navbar-clear');
@@ -103,7 +103,10 @@ jQuery(document).ready(function ($) {
 				
 			} else {
 				offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
+				offset_top = ( dataslide == 2 ) ? offset_top : offset_top+1;
 			}
+
+			console.log("scroll: " + offset_top);
 			htmlbody.stop(false, false).animate({
 				scrollTop: offset_top
 			}, 1500, 'easeInOutQuart');
@@ -112,10 +115,11 @@ jQuery(document).ready(function ($) {
 		//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
 		links.click(function (e) {
 			if (this.id !== "contactMe"){
-				console.log(this.id);
+				// console.log("go");
 				e.preventDefault();
 				var dataslide = $(this).attr('data-slide');
 				goToByScroll(dataslide);
+				// setMenu(dataslide-1);
 				if ($(window).width() <= 768){
 					$(".navbar-collapse").collapse('hide');
 					$("#slide-1").toggleClass('movingDown');
@@ -141,7 +145,10 @@ jQuery(document).ready(function ($) {
 								
 			$('.slide').each(function(index, element) {
 				tops.push( $(element).offset().top);
+				console.log("element " + element + "top: " + $(element).offset().top);
 			});
+
+			console.log("location: " + location);
 
 			for (i = 0; i < 4; i++){
 				if (i < 3){
@@ -161,6 +168,7 @@ jQuery(document).ready(function ($) {
 
 function setMenu(element){
 	var current = element + 1;
+	console.log(current);
 
 	for (i = 1; i < 5; i++){
 		if (i == current){
