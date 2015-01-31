@@ -10,11 +10,6 @@ $(document).ready(function() {
 	var setWindowHeight = function() {
 		return parseInt($(window).height());
 	};
-	if ($(window).width() > 768){
-			// $('#slide-1').height(setWindowHeight);
-		// $('#startImage').height(setWindowHeight);
-
-	}
 
 });
 
@@ -128,7 +123,7 @@ var delay = (function(){
 
 $(document).ready(function(){
   $('#portfolio').slick({
-   arrows:true,
+   arrows:true,   
    dots: true,
 	  infinite: true,
 	  speed: 300,
@@ -168,13 +163,13 @@ $(document).ready(function($) {
 		var navHeight = 0;
 
 		if (window.location.pathname == "/"){
-			if ($(window).width() <= 768){
-				navHeight= $("#slide-1").height() - 53;
-			} else {
-				navHeight= $(window).height() - 70;
-			}
+			// if ($(window).width() <= 768){
+			// 	navHeight= $("#slide-1").height() - 53;
+			// } else {
+			// 	navHeight= $(window).height() - 70;
+			// }
 
-			if ($(document).scrollTop() >= navHeight){
+			if ($(document).scrollTop() > 0){
 				$('nav').removeClass('navbar-clear');
 			} else {
 				$('nav').addClass('navbar-clear');
@@ -216,15 +211,19 @@ jQuery(document).ready(function ($) {
 		
 		//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
 		links.click(function (e) {
-			e.preventDefault();
-			var dataslide = $(this).attr('data-slide');
-			goToByScroll(dataslide);
-			if ($(window).width() <= 768){
-				$(".navbar-collapse").collapse('hide');
-				$("#slide-1").toggleClass('movingDown');
-				$("#slide-1 #title-info").toggleClass('movingDown');
-				if ($(".navbar-fixed-top").hasClass('navbar-clear'))
-					$(".navbar-clear").toggleClass('darker');
+			if (this.id !== "contactMe"){
+				console.log(this.id);
+				e.preventDefault();
+				var dataslide = $(this).attr('data-slide');
+				goToByScroll(dataslide);
+				if ($(window).width() <= 768){
+					$(".navbar-collapse").collapse('hide');
+					$("#slide-1").toggleClass('movingDown');
+					$("#slide-1 #title-info").toggleClass('movingDown');
+					if ($(".navbar-fixed-top").hasClass('navbar-clear'))
+						$(".navbar-clear").toggleClass('darker');
+				}
+
 			}
 		});
 		
@@ -287,8 +286,8 @@ function setMenu(element){
 
 $('.navbar-fixed-top button#toggle-btn').click(function(){
 	if ($(window).width() <= 768){
-		$("#slide-1").toggleClass('movingDown');
-		$("#slide-1 #title-info").toggleClass('movingDown');
+		// $("#slide-1").toggleClass('movingDown');
+		// $("#slide-1 #title-info").toggleClass('movingDown');
 		if ($(".navbar-fixed-top").hasClass('navbar-clear'))
 			$(".navbar-clear").toggleClass('darker');
 	} 
