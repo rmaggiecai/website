@@ -13,27 +13,6 @@ $(document).ready(function() {
 
 });
 
-//set my work section width
-$(function() {
-	var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
-	$(window).resize(function() {
-		delay(function() {
-				var gallery_images = $('#portfolio figure');
-				var gallery_width = gallery_images.width() * gallery_images.length + 25;
-				
-				$('#portfolio .row').css('width', gallery_width );
-
-				// var left_pos = $('#portfolio .row').width() - $('body').width();
-				// left_pos /= -2;
-
-				// $('#portfolio .row').css('left', left_pos);
-			
-			},
-			pause
-		);
-	});
-	$(window).resize();
-});
 
 var delay = (function(){
 	var timer = 0;
@@ -43,139 +22,60 @@ var delay = (function(){
 	};
 })();
 
-// //navigation/ button clicks
-// jQuery(document).ready(function ($) {
-// 	//Cache some variables
-	
-// 	var arrows = $('#controls button');
-	
-// 	arrows.click(function(e) {
-// 		e.preventDefault();
-		
-// 		// if ( $(this).hasClass('inactive') )
-// 		// 	return;
-		
-// 		var slide = null;
-// 		// var datasheet = $('.nav > li.active').data('slide');
-// 		// var offset_top = false;
-// 		var offset_left;
-		
-		
-// 		switch( $(this).attr('id') ) {
-// 			case 'left':
-// 				offset_left = $('#portfolio').scrollLeft() - 452;
-
-// 				break;
-// 			case 'right':
-// 				offset_left = $('#portfolio').scrollLeft() + 452;
-				
-// 				break;
-// 		}
-
-// 		if ( $('#portfolio .row').width() != $('body').width() ) {
-// 			console.log("animation");
-// 			$("#slide-3 #portfolio").animate({
-// 			    scrollLeft: offset_left
-// 			  }, 1500, 'easeInOutQuart' );
-// 		}
-// 		checkButtonStyle(offset_left);
-// 	});
-
-// 	$("#slide-3 #portfolio").scroll(function(event) {
-// 		checkButtonStyle($(this).scrollLeft());
-// 		/* Act on the event */
-// 	});
-
-// });
-
-
-
-// function buttonStyle( button,active ){
-// 	if (active) 
-// 		$(button).removeClass('inactive');
-// 	else 
-// 		$(button).addClass('inactive');
-// };
-
-// function checkButtonStyle( placement ){
-	
-// 	// console.log(placement);
-// 	// var placement =parseInt(rowPlacement.scrollLeft());
-
-	
-// 	if (placement <= 0){
-
-// 		buttonStyle($('#controls #left'),false);
-// 		buttonStyle($('#controls #right'),true);
-// 	} else {
-
-// 		buttonStyle($('#controls #left'),true);
-// 		// console.log($(rowPlacement).width());
-// 		// console.log(placement);
-
-// 		if ($("#portfolio").width() <= placement)
-// 			buttonStyle($('#controls #right'),false);
-// 		else 
-// 			buttonStyle($('#controls #right'),true);
-
-// 	}
-// };
 
 $(document).ready(function(){
-  $('#portfolio').slick({
-   arrows:true,   
-   dots: true,
-	  infinite: true,
-	  speed: 300,
-	  slidesToShow: 3,
-	  slidesToScroll: 3,
-	  responsive: [
-	    {
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 3,
-	        slidesToScroll: 3,
-	        infinite: true,
-	        dots: true
-	      }
-	    },
-	    {
-	      breakpoint: 600,
-	      settings: {
-	        slidesToShow: 2,
-	        slidesToScroll: 2
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1
-	      }
-	    }
-	    ]
-  });
+  if (window.location.pathname == "/"){
+		$('#portfolio').slick({
+		arrows:true,   
+		dots: true,
+		  infinite: true,
+		  speed: 300,
+		  slidesToShow: 3,
+		  slidesToScroll: 3,
+		  responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3,
+		        infinite: true,
+		        dots: true
+		      }
+		    },
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		    ]
+		});
+	}
 });
 
 //sticky header
 $(document).ready(function($) {
 	$(document).scroll(function(){
-		var navHeight = 0;
+		// var navHeight = 0;
 
-		if (window.location.pathname == "/"){
-			// if ($(window).width() <= 768){
-			// 	navHeight= $("#slide-1").height() - 53;
-			// } else {
-			// 	navHeight= $(window).height() - 70;
-			// }
+		// if (window.location.pathname == "/"){
 
 			if ($(document).scrollTop() > 0){
+				console.log("hi");
 				$('nav').removeClass('navbar-clear');
 			} else {
 				$('nav').addClass('navbar-clear');
 
 			}
-		} 
+		//} 
 
 	});
 	
