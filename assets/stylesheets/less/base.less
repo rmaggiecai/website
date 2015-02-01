@@ -86,7 +86,7 @@ p{
 
 .navbar-nav>li>{
 	background:transparent;
-	color: transparent;
+	// color: transparent;
 }
 a{
 	color: @coral0;
@@ -100,8 +100,15 @@ a{
 		background-color: transparent;
 	}
 	&:active{
-		background-color: white;
+		background-color: transparent;
 	}
+	&:focus{
+		background-color: transparent;
+	}
+}
+
+.nav>li>a:hover, .nav>li>a:focus{
+	background-color: transparent!important;
 }
 
 .story{
@@ -169,6 +176,10 @@ a{
 		-webkit-transition: margin-top .35s ease;
         -o-transition: margin-top .35s ease;
         transition: margin-top .35s ease;
+
+        @media(max-width:768px){
+			padding: 0px 15px;
+		}
 
 		&.movingDown{
 			margin-top: 227px;
@@ -343,7 +354,9 @@ a{
 	.description{
 		@media(max-width: 992px){
 			margin-top: 10px;
+			margin-left: -15px;
 		}
+
 	}
 }
  .footer{
@@ -367,6 +380,9 @@ a{
 #slide-3{
 	// margin: 0px 15px;
 	// overflow: hidden;
+	@media(max-width:768px){
+				margin: 0px 35px;
+	}
 
 	#portfolio {
 		// margin: 0 15px;
