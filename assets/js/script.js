@@ -24,7 +24,7 @@ var delay = (function(){
 
 
 $(document).ready(function(){
-  if (window.location.pathname == "/"){
+  // if (window.location.pathname == "/"){
 		$('#portfolio').slick({
 		arrows:true,   
 		dots: true,
@@ -58,7 +58,7 @@ $(document).ready(function(){
 		    }
 		    ]
 		});
-	}
+	//}
 });
 
 //sticky header
