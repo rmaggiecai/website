@@ -30,8 +30,8 @@ $(document).ready(function(){
 		dots: true,
 		  infinite: true,
 		  speed: 300,
-		  slidesToShow: 3,
-		  slidesToScroll: 3,
+		  slidesToShow: 2,
+		  slidesToScroll: 2,
 		  responsive: [
 		    {
 		      breakpoint: 1024,
@@ -106,7 +106,6 @@ jQuery(document).ready(function ($) {
 				offset_top = ( dataslide == 2 ) ? offset_top : offset_top+1;
 			}
 
-			console.log("scroll: " + offset_top);
 			htmlbody.stop(false, false).animate({
 				scrollTop: offset_top
 			}, 1500, 'easeInOutQuart');
@@ -145,10 +144,8 @@ jQuery(document).ready(function ($) {
 								
 			$('.slide').each(function(index, element) {
 				tops.push( $(element).offset().top);
-				console.log("element " + element + "top: " + $(element).offset().top);
 			});
 
-			console.log("location: " + location);
 
 			for (i = 0; i < 4; i++){
 				if (i < 3){

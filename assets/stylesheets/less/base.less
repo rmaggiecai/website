@@ -30,11 +30,12 @@ body{
 }
 
 h1{
-	color: @teal0;
+	// color: @teal0;
 	font-weight: bold;
 	font-size: 3.5em;
 	margin-top: 190px;
 	margin-bottom: 0.5em;
+	font-family: "proxima-nova-alt-ext-cond",sans-serif;
 
 	@media(max-width:768px){
 		margin-top: 3em;
@@ -166,7 +167,6 @@ a{
 		bottom: 35%;
 		margin-top: 0px;
 		width: 100%;
-		text-align: center;
 		-webkit-transition: margin-top .35s ease;
         -o-transition: margin-top .35s ease;
         transition: margin-top .35s ease;
@@ -270,9 +270,6 @@ a{
 
 }
 
-.home-section-title{
-	text-align: center;
-}
 
 #slide-2{
 	// position: relative;
@@ -318,6 +315,10 @@ a{
 		// font-size: 0.75em;
 	}
 
+	.job-info{
+		margin-left: -15px;
+	}
+
 	[class^="des-"]{
 		font-size: 0.8em;
 		color: @gray3;
@@ -334,10 +335,6 @@ a{
 	h5{
 		margin-bottom: 0px;
 		margin-top: 0px;
-	}
-
-	h3{
-		padding-left: 15px;
 	}
 
 	h1{
@@ -369,10 +366,11 @@ a{
  	}
  }
 #slide-3{
-	// margin: 0px -15px;
+	// margin: 0px 15px;
 	// overflow: hidden;
 
 	#portfolio {
+		// margin: 0 15px;
 		// margin: 0 auto;
 		// overflow: scroll;
 		// padding: 0;
@@ -659,15 +657,10 @@ a{
 
 .portfolio{
 	margin:0 20px;
-	.title{
-		@media(min-width:992px){
-			margin-left: 5em;
-		} 
-		@media(min-width: 768px){
-			margin-left: 2em;
-		}
+	// .title{
+	// 	text-align: center;
 		
-	}
+	// }
 
 	.portfolio-story{
 		position: relative;
@@ -740,9 +733,9 @@ a{
 #portfolio-cover-img-serendipity{
 	background-image: url("/assets/img/serendipity/air-balloon.png");
 }
-.section{
-	margin-top: 3em;	
-}
+// .section{
+// 	margin-top: 3em;	
+// }
 
 .sub-section{
 
@@ -770,9 +763,9 @@ a{
 	// }
 }
 
-#about-project{
-	margin-top: 80px;
-}
+// #about-project{
+// 	margin-top: 80px;
+// }
 
 #other-works{
 	position: relative;
@@ -815,6 +808,10 @@ a{
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+}
+
+.title{
+	#slide-1 #home-row-1;
 }
 
 .content-full {
