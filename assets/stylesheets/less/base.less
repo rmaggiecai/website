@@ -39,6 +39,7 @@ h1{
 
 	@media(max-width:768px){
 		margin-top: 3em;
+		font-size: 2.5em;
 	}
 }
 
@@ -49,6 +50,9 @@ h2{
 	font-weight: 300;
 	font-size: 1.4em;
 	margin-top: 0px;
+	@media(max-width:768px){
+		font-size: 1.2em;
+	}
 }
 
 h3 {
@@ -140,8 +144,12 @@ a{
 		#startImage{
 			height: inherit;
 		}
+
+		@media(max-width: 768px	){
+			background: none;
+		}
 	}
-	@media(max-width: 798px){
+	@media(max-width: 768px){
 		height: 300px;
 		-webkit-transition: height .35s ease;
         -o-transition: height .35s ease;
@@ -170,9 +178,9 @@ a{
 	position: relative;
 
 	#title-info{
-		position: absolute;
-		bottom: 35%;
-		margin-top: 0px;
+		// position: absolute;
+		// bottom: 35%;
+		// margin-top: 0px;
 		-webkit-transition: margin-top .35s ease;
         -o-transition: margin-top .35s ease;
         transition: margin-top .35s ease;
@@ -381,6 +389,9 @@ a{
 	// margin: 0px 15px;
 	// overflow: hidden;
 	@media(max-width:768px){
+		h1{
+			margin-left: -15px
+		}
 				margin: 0px 35px;
 	}
 
@@ -632,7 +643,7 @@ a{
 	box-shadow: none;
 	-webkit-transition: background 0.35s ease;
 	transition: background 0.35s ease;
-		&#index{
+		// &#index{
 			a {
 			color: @gray4;
 
@@ -641,7 +652,7 @@ a{
 				}
 			}
 
-		}
+		// }
 
 		&.darker{
 			background: rgba(65,66,66,.75);
@@ -684,6 +695,7 @@ a{
 	}
 
 	margin-bottom: 15em;
+
 }
 
 @media(min-width: 768px){
@@ -702,10 +714,13 @@ a{
 		background-repeat: no-repeat;
 		background-position: center top;
 		height:500px;
-		margin-top: 66px;
+		// margin-top: 66px;
 
 		@media(max-width:768px){
 			background-size: contain;
+			// margin-top: 51px;
+			background-position: center center;
+			height:300px;
 		}
 
 	.disclaimer{
@@ -737,10 +752,8 @@ a{
 
 #portfolio-cover-img-finder{
 	background-image: url("/assets/img/finder/finder-cover-image.png");
-	background-size: 400px 723px;
-
-	@media(max-width:768px){
-		background-size: 350px;
+	@media(min-width:992px){
+		background-size: 400px 723px;
 	}
 }
 
@@ -767,6 +780,13 @@ a{
 		margin-left: auto;
 		margin-right: auto;
 
+	}
+
+	@media(max-width: 768px){
+		[class^="col-md"]{
+			margin-left: -15px;
+			margin-right: -15px;
+		}
 	}
 
 	// .text{
@@ -834,6 +854,20 @@ a{
 
 	h1{
 		color:white;
+			@media(max-width: 768px){
+				margin-top: 0px;
+			}
+
+	}
+
+	@media(max-width: 768px){
+		background-color: @cover;
+		.center-paragraph{
+		height:300px;
+		margin-top: -15px;
+		position: relative;	
+		}	
+
 	}
 }
 
@@ -951,7 +985,7 @@ iframe{
 	margin-left: -15px;
 
 	@media (max-width:768px){
-		top:50%;
+		top:300px;
 	}
 }
 
@@ -974,4 +1008,10 @@ iframe{
 
 img{
 	max-height: 500px;
+}
+
+#title-info{
+	position: absolute;
+		bottom: 35%;
+		margin-top: 0px;
 }

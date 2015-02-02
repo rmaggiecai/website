@@ -84,8 +84,9 @@ $(document).ready(function($) {
 //move to page
 jQuery(document).ready(function ($) {
 	//Cache some variables
-	if (window.location.pathname == "/"){
+	 if (window.location.pathname == "/"){
 		var links = $('.nav').find('li');
+		//console.log(links);
 		slide = $('.slide');
 		button = $('.button');
 		mywindow = $(window);
@@ -96,15 +97,15 @@ jQuery(document).ready(function ($) {
 		function goToByScroll(dataslide) {
 			// console.log('.slide[data-slide="' + dataslide + '"]');
 			var offset_top = 0;
-			if ($(window).width() <= 768){ 
+			// if ($(window).width() <= 768){ 
 				
-					offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top-227;
+			// 		offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top-227;
 
 				
-			} else {
+			// } else {
 				offset_top = ( dataslide == 1 ) ? '0px' : $('.slide[data-slide="' + dataslide + '"]').offset().top;
 				offset_top = ( dataslide == 2 ) ? offset_top : offset_top+1;
-			}
+			// }
 
 			htmlbody.stop(false, false).animate({
 				scrollTop: offset_top
@@ -113,20 +114,21 @@ jQuery(document).ready(function ($) {
 		
 		//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
 		links.click(function (e) {
-			if (this.id !== "contactMe"){
+			console.log("hi");
+			if (window.location.pathname == "/" && this.id !== "contactMe"){
 				// console.log("go");
 				e.preventDefault();
 				var dataslide = $(this).attr('data-slide');
 				goToByScroll(dataslide);
 				// setMenu(dataslide-1);
-				if ($(window).width() <= 768){
+
+			}
+			if ($(window).width() <= 768){
 					$(".navbar-collapse").collapse('hide');
-					$("#slide-1").toggleClass('movingDown');
-					$("#slide-1 #title-info").toggleClass('movingDown');
+					// $("#slide-1").toggleClass('movingDown');
+					// $("#slide-1 #title-info").toggleClass('movingDown');
 					if ($(".navbar-fixed-top").hasClass('navbar-clear'))
 						$(".navbar-clear").toggleClass('darker');
-				}
-
 			}
 		});
 		
@@ -165,7 +167,7 @@ jQuery(document).ready(function ($) {
 
 function setMenu(element){
 	var current = element + 1;
-	console.log(current);
+	// console.log(current);
 
 	for (i = 1; i < 5; i++){
 		if (i == current){
@@ -193,7 +195,6 @@ $('.navbar-fixed-top button#toggle-btn').click(function(){
 	if ($(window).width() <= 768){
 		// $("#slide-1").toggleClass('movingDown');
 		// $("#slide-1 #title-info").toggleClass('movingDown');
-		if ($(".navbar-fixed-top").hasClass('navbar-clear'))
 			$(".navbar-clear").toggleClass('darker');
 	} 
 
