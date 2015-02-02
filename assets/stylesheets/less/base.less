@@ -678,7 +678,7 @@ a{
 }
 
 .portfolio{
-	margin:0 20px;
+	padding: 0px;
 	// .title{
 	// 	text-align: center;
 		
@@ -713,7 +713,11 @@ a{
 [id^="portfolio-cover-img-"]{
 		background-repeat: no-repeat;
 		background-position: center top;
-		height:500px;
+		position: absolute;
+		width: 100%;
+		height:100%;
+		background-size: contain;
+		margin-left: -15px;
 		// margin-top: 66px;
 
 		@media(max-width:768px){
@@ -752,9 +756,9 @@ a{
 
 #portfolio-cover-img-finder{
 	background-image: url("/assets/img/finder/finder-cover-image.png");
-	@media(min-width:992px){
-		background-size: 400px 723px;
-	}
+	// @media(min-width:992px){
+	// 	background-size: 400px 723px;
+	// }
 }
 
 #portfolio-cover-img-serendipity{
@@ -850,13 +854,11 @@ a{
 
 .title{
 	#slide-1 #home-row-1;
-	margin: 0px -35px;
+	// margin-left: -35px;
 
 	h1{
 		color:white;
-			@media(max-width: 768px){
-				margin-top: 0px;
-			}
+		margin-top: 0px;
 
 	}
 
@@ -1011,10 +1013,9 @@ img{
 }
 
 #title-info{
-	@media(max-width: 768px){
-		position: absolute;
-		bottom: 35%;
-		margin-top: 0px;
-	}
+	position: absolute;
+	bottom: 35%;
+	margin-top: 0px;
+	max-width: 700px;
 	
 }

@@ -55,94 +55,93 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container-fluid portfolio">
-        <div class="gap" id="portfolio-cover-img-infiniteScroll">
-          <div class="title content">
-            <div class="center-paragraph">
-              <div id="title-info">
-                <h1>Brit + Co. Infinite Scroll Tab Redesign</h1>
-                <p class="disclaimer">Disclaimer: this design was not implemented by Brit + Co.</p>
-              </div>
+    <div class="container-fluid">
+      <div class="gap" id="portfolio-cover-img-infiniteScroll">
+        <div class="title content">
+          <div class="center-paragraph">
+            <div id="title-info">
+              <h1>Brit + Co. Infinite Scroll Tab Redesign</h1>
+              <p class="disclaimer">Disclaimer: this design was not implemented by Brit + Co.</p>
             </div>
           </div>
         </div>
+      </div>
 
-
-
-        <div class="portfolio-story content">
-          <div class="section" id="about-project">
+      <div class="container-fluid" id="home-content">
+        <div class="portfolio-story portfolio content">
+          <div class="story" id="about-project">
             <div class="row">
               <div class="center-paragraph">
                 <h1>About the Project</h1>
                 <p>Infinite scroll at the bottom of each article was introduced to create a continuous reading experience. Since there are limited number of related- reads, the infinite scroll also contains popular reads and latest posts so that users will never reach a dead end.<br />
-              <br />The tabs indicate what type of articles are being displayed. Users can also filter through the different types of articles by clicking on the tabs. However, some users get confused when using these tabs.<br/> <br />
-              Using heuristic evaluation by Jakob Nielsen, I identified 3 problems with the original design:</p>
-              <img src="assets/img/bc-infiniteScroll/original-section.jpg" class="img-responsive" id="original" alt="Responsive image">
+                <br />The tabs indicate what type of articles are being displayed. Users can also filter through the different types of articles by clicking on the tabs. However, some users get confused when using these tabs.<br/> <br />
+                Using heuristic evaluation by Jakob Nielsen, I identified 3 problems with the original design:</p>
+                <img src="assets/img/bc-infiniteScroll/original-section.jpg" class="img-responsive" id="original" alt="Responsive image">
 
               </div>
             </div>
-            <!-- <div class="row sub-section">
-              <img src="assets/img/bc-infiniteScroll/original-section.jpg" class="img-responsive img-right" alt="Responsive image">
-            </div> -->
-              <div class="row sub-section">
-                <div class="col-md-4 col-md-offset-2 text">
-                  <p><b>#1 Tab menu design does not match real-world mental models</b></p>
-                  <p>There is no UI element to visually connect the active tab with content displayed, unlike section dividers used in notebooks and binders.</p>
-                </div>
 
-                <div class="col-md-4">
-                  <img src="assets/img/bc-infiniteScroll/tab.jpg" class="img-responsive img-right" alt="Responsive image">
-                </div>
+            <div class="row sub-section">
+              <div class="col-md-4 col-md-offset-2 text">
+                <p><b>#1 Tab menu design does not match real-world mental models</b></p>
+                <p>There is no UI element to visually connect the active tab with content displayed, unlike section dividers used in notebooks and binders.</p>
               </div>
 
-              <div class="row sub-section">
-                <div class="col-md-offset-2 col-md-8">
-                  <p><b>#2 Active colors for inactive tabs</b></p>
-                  <p>Tabs are coded in bright colors at all times. The lack of contrast make it difficult for users to differentiate active tab from inactive tabs.</p>
-                </div>
-              </div>
-              <div class="row sub-section">
-                <div class="col-md-4 col-md-offset-2">
-                  <img src="assets/img/bc-infiniteScroll/hover.jpg" class="img-responsive img-left" alt="Responsive image">
-                </div>
-                <div class="col-md-4 text">
-                  <p><b>#3 Inconsistent feedback</b></p>
-                  <p>The hover state for these tabs do not have accompanied animation while other clickable features on the website do.</p>
-                </div>
+              <div class="col-md-4">
+                <img src="assets/img/bc-infiniteScroll/tab.jpg" class="img-responsive img-right" alt="Responsive image">
               </div>
             </div>
 
-            <div class="section" id="original-wireframes">
-              <div class="row">
-                <div class="center-paragraph">
-                  <h1>Proposed Design</h1>
-                  <p>After looking at different tab-style navigations, I came up with this final design. I introduced a horizontal line in the same color as the active tab. This line visually connects the content displayed with the active tab. I made the inactive tabs smaller to create depth. This illusion helps the active tab stand out from the inactive tabs. It also creates layers, similar to the way dividers stack inside a binder. To further differentiate active tab from inactive tabs, only the active tab is in color. <br /> <br />
+            <div class="row sub-section">
+              <div class="col-md-offset-2 col-md-8">
+                <p><b>#2 Active colors for inactive tabs</b></p>
+                <p>Tabs are coded in bright colors at all times. The lack of contrast make it difficult for users to differentiate active tab from inactive tabs.</p>
+              </div>
+            </div>
+            <div class="row sub-section">
+              <div class="col-md-4 col-md-offset-2">
+                <img src="assets/img/bc-infiniteScroll/hover.jpg" class="img-responsive img-left" alt="Responsive image">
+              </div>
+              <div class="col-md-4 text">
+                <p><b>#3 Inconsistent feedback</b></p>
+                <p>The hover state for these tabs do not have accompanied animation while other clickable features on the website do.</p>
+              </div>
+            </div>
+          </div><!--about-->
+
+          <div class="story" id="proposed-design">
+            <div class="row">
+              <div class="center-paragraph">
+                <h1>Proposed Design</h1>
+                <p>After looking at different tab-style navigations, I came up with this final design. I introduced a horizontal line in the same color as the active tab. This line visually connects the content displayed with the active tab. I made the inactive tabs smaller to create depth. This illusion helps the active tab stand out from the inactive tabs. It also creates layers, similar to the way dividers stack inside a binder. To further differentiate active tab from inactive tabs, only the active tab is in color. <br /> <br />
                 I wanted to keep the hover state animation consistent, thus it resembles those used for the main navigation bar and the social icons.</p>
-                </div>
-              </div>
-              <div class="row sub-section">
-                <div class="col-md-10 col-md-offset-1">
-                  <img src="assets/img/bc-infiniteScroll/prototypes-hover-browser.jpg" class="img-responsive img-center" alt="Responsive image">
-                </div>
               </div>
             </div>
+            <div class="row sub-section">
+              <div class="col-md-10 col-md-offset-1">
+                <img src="assets/img/bc-infiniteScroll/prototypes-hover-browser.jpg" class="img-responsive img-center" alt="Responsive image">
+              </div>
+            </div>
+          </div><!--proposed-design-->
 
+        </div><!--portfolio-story-->
+        <footer class="footer">
+          <div class="container">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+              <ul class="social">
+                <li><a href="http://twitter.com/rmaggiecai"><i class="fa fa-twitter fa-lg"></i></a></li>
+                <li><a href="http://www.linkedin.com/in/rmaggiecai"><i class="fa fa-linkedin fa-lg"></i></a></li>
+                <li><a href="http://dribbble.com/rmaggiecai"><i class="fa fa-dribbble fa-lg"></i></a></li>
+                <li><a href="https://github.com/rmaggiecai"><i class="fa fa-github fa-lg"></i></a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-    </div>
+        </footer>
+      </div><!--container-->
 
-    <footer class="footer">
-      <div class="container">
-        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-          <ul class="social">
-            <li><a href="http://twitter.com/rmaggiecai"><i class="fa fa-twitter fa-lg"></i></a></li>
-            <li><a href="http://www.linkedin.com/in/rmaggiecai"><i class="fa fa-linkedin fa-lg"></i></a></li>
-            <li><a href="http://dribbble.com/rmaggiecai"><i class="fa fa-dribbble fa-lg"></i></a></li>
-            <li><a href="https://github.com/rmaggiecai"><i class="fa fa-github fa-lg"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    </div><!--container-->
+
+    
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
