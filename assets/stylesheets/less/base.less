@@ -843,13 +843,17 @@ a{
 // 	border-bottom: 1px solid @gray4;
 // }
 
-.header, .content {
+.content {
 	background:#fff;
-	padding:1em;
+	
 
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+}
+.header{
+	.content;
+	padding:1em;
 }
 
 .title{
