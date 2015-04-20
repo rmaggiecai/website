@@ -1,0 +1,122 @@
+@border: rgba(0,0,0,0.0980392);
+@black: rgba(0,0,0,0.8);
+@gray: rgba(0,0,0,0.6);
+@btn-border: rgba(0, 0, 0, 0.15);
+@44gray: rgba(0, 0, 0, 0.44);
+
+body {
+	font-family: "jaf-bernino-sans";
+	font-size: 18px;
+	color: @black;
+}
+
+.medium-logo-words{
+	font-family: "clarendon-text-pro";
+	font-weight: bold;
+	color: @black;
+	font-size: 29px;
+	letter-spacing: -0.5px;
+
+
+	&:hover{
+		text-decoration: none;
+		color: @black;
+	}
+}
+
+.navbar-middle{
+	display: inline;
+}
+
+.navbar-default{
+	background-color: white;
+	box-shadow: 0 0 1px rgba(0,0,0,0.15);
+	padding-top: 16px;
+
+	ul.nav{
+		li{
+			margin-right: 20px;
+			.anchor{
+				text-transform: uppercase;
+				padding: 31px 0px 19px;
+				letter-spacing: .1em;
+				
+				font-size: 11px;
+				font-weight: 400;
+				color: @gray;
+			}
+			&.active{
+				.anchor-active{
+					font-weight: 700;
+					color: @black;
+					background-color: white !important;
+				}
+				border-bottom: 2px @black solid;
+				// margin-top: -1px;
+			}
+		}
+	}
+
+	.navbar-middle{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top:0;
+		text-align: center;
+		height: 100%;
+
+		.nav-tabs{
+			margin-right: 400px;
+			height: 100%;
+			border: none;
+		}
+
+		.nav-list{
+			max-width: 580px;
+			float: none;
+		}
+
+	}
+
+	.navbar-header{
+		position: relative;
+		z-index: 500;
+	}
+}
+
+.btn{
+	height: 37px;
+	padding: 0 16px;
+	color: @44gray;
+	border: 1px solid @btn-border;
+	font-size: 14px;
+	letter-spacing: -0.02em;
+	border-radius: 99em;
+	background-color: white;
+}
+
+.btn-circle{
+	width: 38px;
+	padding: 0px;
+	text-align: center;
+}
+
+.btn-set{
+	margin-bottom: 17px;
+	.btn{
+		margin-right:8px;
+		margin-left: -4px;
+	}
+}
+
+.avatar{
+	border: none;
+}
+.icon{
+	color: @black;
+}
+
+.layoutSingleColumn{
+	margin: 0px auto;
+	max-width: 700px;
+}

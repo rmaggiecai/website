@@ -1,0 +1,96 @@
+body {
+  font-family: "jaf-bernino-sans";
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.medium-logo-words {
+  font-family: "clarendon-text-pro";
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 29px;
+  letter-spacing: -0.5px;
+}
+.medium-logo-words:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+.navbar-middle {
+  display: inline;
+}
+.navbar-default {
+  background-color: white;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  padding-top: 16px;
+}
+.navbar-default ul.nav li {
+  margin-right: 20px;
+}
+.navbar-default ul.nav li .anchor {
+  text-transform: uppercase;
+  padding: 31px 0px 19px;
+  letter-spacing: .1em;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+.navbar-default ul.nav li.active {
+  border-bottom: 2px rgba(0, 0, 0, 0.8) solid;
+}
+.navbar-default ul.nav li.active .anchor-active {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: white !important;
+}
+.navbar-default .navbar-middle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  height: 100%;
+}
+.navbar-default .navbar-middle .nav-tabs {
+  margin-right: 400px;
+  height: 100%;
+  border: none;
+}
+.navbar-default .navbar-middle .nav-list {
+  max-width: 580px;
+  float: none;
+}
+.navbar-default .navbar-header {
+  position: relative;
+  z-index: 500;
+}
+.btn {
+  height: 37px;
+  padding: 0 16px;
+  color: rgba(0, 0, 0, 0.44);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  border-radius: 99em;
+  background-color: white;
+}
+.btn-circle {
+  width: 38px;
+  padding: 0px;
+  text-align: center;
+}
+.btn-set {
+  margin-bottom: 17px;
+}
+.btn-set .btn {
+  margin-right: 8px;
+  margin-left: -4px;
+}
+.avatar {
+  border: none;
+}
+.icon {
+  color: rgba(0, 0, 0, 0.8);
+}
+.layoutSingleColumn {
+  margin: 0px auto;
+  max-width: 700px;
+}
